@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Offer</title>
+    <link rel="shortcut icon" href="site/img/node.png" type="image/x-icon">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        main > article > img{
+            width:100%;
+            max-width:900px;
+        }
+        main > article > fieldset{
+            width:calc(100% - 7px);
+        }
+        body{
+            width:100%;
+            max-width:1920px;
+            margin-right:auto;
+            margin-left:auto;
+            font-size:20px;
+        }
+        main{
+            width:100%;
+            max-width:1300px;
+            margin-right:auto;
+            margin-left:auto;
+        }
+        main > article{
+            width:100%;
+            max-width:1300px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        main > article > p, main > article > strong{
+            margin:1%;
+        }
+        article > table{
+            border:3px solid black;
+        }
+        body > main > article > table > tbody > tr > td:nth-child(2){
+            background-color: rgb(150, 128, 101);
+            color:white;
+            text-shadow:1px 1px black;
+        }
+        body > main > article > table > tbody > tr > td:nth-child(3){
+            background-color: green;
+            color:white;
+            text-shadow:black 1px 1px;
+        }
+        body > main:nth-child(1) > article:nth-child(1) > table:nth-child(5) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2),body > main:nth-child(1) > article:nth-child(1) > table:nth-child(6) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2){
+            background-color: green;
+            font-size:30px;
+        }
+        body > main:nth-child(1) > article:nth-child(1) > table:nth-child(5) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1),body > main > article > table > tbody > tr > td{
+            text-align: center;
+            font-size:30px;
+        }
+        body > main > article > table > tbody > tr > td{
+            border-bottom:1px solid black;
+        }
+        /* body > main > article > table, tbody, tr, td,body > main > article > table{
+            padding: 0;
+            margin:0;
+        } */
+         @media(max-width:700px){
+            body > main > article > table > tbody > tr > td{
+                font-size:15px;
+            }
+            body > main > article > table{
+                font-size:15px;
+            }
+            main > article > article > table{
+                font-size:15px;
+            }
+            body > main > article > table > tbody > tr{
+                font-size:15px;
+            }
+         }
+         body > main > article > section{
+            width:100%;
+        }
+        nav{
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            width:100%;
+        }
+        nav > div{
+            height:70px;
+            display:grid;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .openMenu{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width:0px;
+            height:100vh;
+            position: fixed;
+            top:0;
+            left:0;
+            background-color: rgb(157, 78, 189);
+            transition: all ease-out 1s;
+            font-size:0;
+            flex-direction: column;
+            opacity:0;
+        }
+
+        .openMenu > h3 > a{
+            color:rgb(100, 221, 76);
+            text-shadow:black 3px 3px;
+            text-decoration: none;
+        }
+        .openMenu > h3 > a:hover{
+            color:coral;
+        }
+        /* @media(min-width:700px){
+            #menu{
+                display:none;
+            }
+        }
+        @media(max-width:700px){
+
+            body > main > header > nav > strong > ul{
+                display:none;
+            }
+        } */
+
+        #menu > span{
+            width:70px;
+            height:3px;
+            background-color:var(--main-color);
+            display:block;
+        }
+        #menu > span:nth-child(2){
+            margin-top:15px;
+            margin-bottom:15px;
+        }
+        :root {
+            --main-color: rgb(71, 207, 17);
+            --main-color-two: rgba(71, 207, 17, 0.377);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <nav>
+                <div id="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <h1 id="rus">Разумная цена на целевую страницу</h1>
+                <h1 id="eng">Reasonable price for landing page</h1>
+            </nav>
+           
+            <fieldset>
+                <legend>language</legend>
+                <label id="language">
+                    <span>Eng</span>
+                    <input type="checkbox">
+                </label>
+            </fieldset>
+            <i id="rus">Чтобы лишний раз не редактировать цены, валюта указана в долларах “ $ “, даже есть возможность принимать средства в любых валютах, но! Лучше в рублях, т.к. конвертация стоит дорого и самая стабильная валюта “сверхдержавы”, ведет себя очень стабильно(уверенно стабильно падает и не поднимается). Поэтому зная все прелести стабильного постапокалипсиса, цены указаны в $.</i>
+            <i id="eng">To avoid editing prices once again, the currency is indicated in dollars “ $ “, it is even possible to accept funds in any currencies, but! Better in rubles, because conversion is expensive and the most stable currency of the “superpower” behaves very stably (it confidently falls and does not rise). Therefore, knowing all the delights of a stable post-apocalypse, the prices are indicated in $.</i>
+            <table id="rus">
+                <tr>
+                  <td colspan="2">Offer</td>
+                  <td>Price</td>
+                  <td></td>
+                
+                </tr>
+                <tr>
+                  <td>Консультация:</td>
+                  <td>~1час</td>
+                  <td>100$</td>
+                
+                </tr>
+                <tr>
+                    <td>Лендинг пейдж по макету из фигмы 1 слайд:</td>
+                    <td>~1 мин - 30минут</td>
+                    <td>5$</td>
+                   
+                  </tr>
+                <tr>
+                  <td>Лендинг пейдж по макету из фигмы 3 слайда:</td>
+                  <td>~15 мин - 1,5 часа</td>
+                  <td>15$</td>
+                 
+                </tr>
+                <tr>
+                  <td>SEO оптимизация сайта:</td>
+                  <td>~1 день - 1 неделя</td>
+                  <td>1000$</td>
+                 
+                </tr>
+                <tr>
+                  <td>Сбор ключевых запросов, составление семантического ядра:</td>
+                  <td>~1 день - 1 неделя</td>
+                  <td>1000$</td>
+                 
+                </tr>
+                <tr>
+                    <td>Запуск контекстной ракламы yandex:</td>
+                    <td>~1 день - 1 неделя</td>
+                    <td>2000$</td>
+                
+                </tr>
+                <tr>
+                    <td>Запуск контукстной рекламы google:</td>
+                    <td>~1 день - 1 неделя</td>
+                    <td>2000$</td>
+                
+                </tr>
+              </table>
+              <table id="eng">
+                <tr>
+                <td colspan="2">Offer</td>
+                <td>Price</td>
+                <td></td>
+                
+                </tr>
+                <tr>
+                <td>Consultation:</td>
+                <td>~1 hour</td>
+                <td>$100</td>
+                
+                </tr>
+                <tr>
+                <td>Landing page based on the figma layout, 1 slide:</td>
+                <td>~1 min - 30 minutes</td>
+                <td>$5</td>
+                
+                </tr>
+                <tr>
+                <td>Landing page based on the figma layout, 3 slides:</td>
+                <td>~15 min - 1.5 hours</td>
+                <td>$15</td>
+                
+                </tr>
+                <tr>
+                <td>SEO optimization site:</td>
+                <td>~1 day - 1 week</td>
+                <td>$1000</td>
+                
+                </tr>
+                <tr>
+                <td>Collecting key queries, compiling a semantic core:</td>
+                <td>~1 day - 1 week</td>
+                <td>$1000</td>
+                
+                </tr>
+                <tr>
+                <td>Launching Yandex contextual advertising:</td>
+                <td>~1 day - 1 week</td>
+                <td>$2000</td>
+                
+                </tr>
+                <tr>
+                <td>Launching Google contextual advertising:</td>
+                <td>~1 day - 1 week</td>
+                <td>$2000</td>
+                
+                </tr>
+                </table>
+            <i id="eng">To avoid editing prices once again, the currency is indicated in dollars "$", it is even possible to accept funds in any currencies, but! Better in rubles, because conversion is expensive and the most stable currency of the "superpower" behaves very stably (confidently steadily falls and does not rise). Therefore, knowing all the delights of a stable post-apocalypse, the prices are indicated in $.</i>
+            <p id="rus">Цены на целевую страницы от 5$ потому что в США - лендинг по макету из фирмы стоит всего 50 долларов. Поэтому в Раше цену можно устанавливать в 5 долларов за один слайд.</p>
+            <h2 id="rus">Заказать сайт по макету из фигмы за 15$</h2>
+
+             <!-- Eng language  -->
+             <p id="eng">Prices for landing pages from $5 because in the US, a landing page based on a company layout costs only $15. Therefore, in Russia, the price can be set at $5 per slide.</p>
+             <h2 id="eng">Order a website based on a figma layout for $15</h2>
+
+            <img src="site/img/superPower.png" alt="How much money langing page in USA">
+            <strong>
+                <h3>If you Search in Google </h3>
+                <p>Rus: <a href="https://www.google.com/search?client=ubuntu-sn&channel=fs&q=%D0%A1%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE+%D1%81%D1%82%D0%BE%D0%B8%D1%82+%D0%BB%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3+%D0%B2+%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B5"> сколько стоит лендинг пейдж в Америке</a></p>
+                <p>Eng: <a href="https://www.google.com/search?q=how+mauch+money+landing+page+in+USA&oq=how+mauch+money+landing+page+in+USA&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTE5MDc5ajBqMagCALACAQ&sourceid=chrome&ie=UTF-8&sei=CcuRZ4iKIsDGwPAP8NPw8AM">how mauch money landing page in USA</a></p>
+            </strong>
+            <p id="rus">Если небольшой сайт с 3 слайдами по макету из фирмы запущенный на гитхаб с адаптивной версткой, то это реальная цена. Особенно в виду того что программистов в России так много, но “закон о прожиточном минимуме” запрещает Человеку получать свыше 500 коммунистических недоразумений в сутки(что равно 5$), иначе любой купит билет на самолет и со словами “прощай нищета”, станет уважаемым эмигрантом. В чем можно убедиться на примере Казахстана, где каждый приехавший россиянин, программист. Потому что в беднейшей стране, пропаганда работает на обогащение одного карликового мини государства, бункерного типа, военных преступников третьего рейха - московии. Каждый россиянин “возможно потерявший Человеческое обличье” превращается в банального квадробера. Пытаясь продать свои “коммунистические” услуги хоть кому нибудь. Но в России как самой беднейшей стране планеты, есть работа которая называется продуктовый охранник. Продуктовый охранник - охраняет продукты, от кражи. Потому что есть такой закон как “прожиточный минимум” и заключив договор с “коммунистическим” работодателем, почти каждый Рашист - расписывается в договоре где есть раздел, называемым: “предотвращение голодного обморока”, где мелким шрифтом на 30 страницах упоминается такая позорная вакханалия как “столкновение с продуктовым охранником”. <span style="font-size:33px;float:right;">😱</span></p>
+
+            <p id="rus">Продуктовый охранник, ведет важную вахту в коммунистической “сверхдержаве”, (а все другие страны им завидуют). Когда Рашист устраивается на работу, то первые 3 месяца, задержка зарплаты. То есть 3 месяца, работать без денег, с одним единственным вариантом - украсть в магазине или на заводе пока не видит “продуктовый охранник”. Такова суровая коммунистическая реальность в “могущественно сверхдержаве”.</p>
+
+           <!-- Eng language  -->
+            <p id="eng">If a small website with 3 slides based on a company layout launched on GitHub with adaptive layout, then this is a real price. Especially considering that there are so many programmers in Russia, but the “law on the subsistence minimum” prohibits a person from receiving more than 500 communist misunderstandings per day (which is equal to $5), otherwise anyone will buy a plane ticket and with the words “goodbye poverty”, will become a respected emigrant. Which can be seen in the example of Kazakhstan, where every Russian who arrived is a programmer. Because in the poorest country, propaganda works to enrich one dwarf mini-state, a bunker type, war criminals of the Third Reich - Muscovy. Every Russian “possibly lost his Human appearance” turns into a banal quad bike. Trying to sell their “communist” services to at least someone. But in Russia, as the poorest country on the planet, there is a job called a food security guard. A food security guard protects food from theft. Because there is such a law as a “living wage” and having concluded a contract with a “communist” employer, almost every Rashist signs a contract that has a section called: “prevention of hunger fainting”, where in small print on 30 pages such a shameful bacchanalia as a “clash with a food security guard” is mentioned. <span style="font-size:33px;float:right;">😱</span></p>
+            
+            <p id="eng">A food security guard, keeps an important watch in a communist "superpower" (and all other countries envy them). When a Rashist gets a job, the first 3 months, the salary is delayed. That is, 3 months, working without money, with only one option - to steal from a store or a factory until the "food security guard" sees. This is the harsh communist reality in the "mighty superpower".</p>
+            <strong id="rus">Поэтому, для того чтобы работать в “сверхдержаве”, нужно подстраиваться под их коммунистические законы, и выставлять реальную цену, разумную со здравым смыслом и доступную любому Рашисту (пусть даже и совсем коммунистическому).</strong>
+            <strong id="eng">Therefore, in order to work in a "superpower", you need to adapt to their communist laws, and set a real price, reasonable with common sense and accessible to any Rashista(even a completely communist one).</strong>
+        <section>
+            <div id="sigCommentsBlock"></div>
+            <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
+            <script type="text/javascript">
+                (function(){
+                    var host_id = '7677';
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.async = true;
+                    script.src = '//sigcomments.com/chat/?host_id='+host_id;
+                    var ss = document.getElementsByTagName('script')[0]; 
+                    ss.parentNode.insertBefore(script, ss);
+                })();
+            </script>
+
+        </section>
+        <section>
+            <span>Ⓒ</span> <strong>всЁ прАвА защишЁнЫ</strong> <span> <a href="https://qucu.ru" title="web workshop named after baron saytoverstausen">🤓</a></span>
+    <div id="data"></div>
+        </section>
+        </article>
+    </main>
+    <!-- <script src="site/js/language.js"></script> -->
+    <script defer src="site/js/main.js"></script>
+</body>
+</html>

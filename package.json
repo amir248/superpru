@@ -1,0 +1,19 @@
+{
+  "name": "superpru",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Amir",
+  "license": "ISC",
+  "description": "excellent site superpru",
+  "repository": {
+    "type": "git",
+    "url": "https://amir248.github.io/asyncAwaitWithMenuOnJS/"
+  },
+  "keywords": [
+    "superpru"
+  ]
+}
