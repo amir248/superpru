@@ -297,6 +297,40 @@
             <p id="eng">A food security guard, keeps an important watch in a communist "superpower" (and all other countries envy them). When a Rashist gets a job, the first 3 months, the salary is delayed. That is, 3 months, working without money, with only one option - to steal from a store or a factory until the "food security guard" sees. This is the harsh communist reality in the "mighty superpower".</p>
             <strong id="rus">Поэтому, для того чтобы работать в “сверхдержаве”, нужно подстраиваться под их коммунистические законы, и выставлять реальную цену, разумную со здравым смыслом и доступную любому Рашисту (пусть даже и совсем коммунистическому).</strong>
             <strong id="eng">Therefore, in order to work in a "superpower", you need to adapt to their communist laws, and set a real price, reasonable with common sense and accessible to any Rashista(even a completely communist one).</strong>
+            <h2>СЧЕТ № 1 от <span id="data"></span></h2>
+        <table>
+            <tr>
+                <td>№</td>
+                <td>Товары(работы, услуги)</td>
+                <td>кол-во</td>
+                <td>Ед\слайдов.</td>
+                <td>Цена</td>
+                <td>Сумма</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Размещение на github сайта по макету из Figma (макет прилагается), с условиями 1 слайд стоимостью 5$ </td>
+                <td>1</td>
+                <td><input type="number" step="1" min="1" max="100" value="1" id="slides" name="price"/></td>
+                <td> <input type="number" step="1" min="5" max="15" value="1" id="price" name="dollars"/></td>
+                <td> <span id="summa"></span> $</td>
+            </tr>
+            <tr>
+          
+                <td colspan="5">Итого:</td>
+                <td> <span id="summaTwo"></span> $</td>
+            </tr>
+            <tr>
+                <td colspan="5">Без налога (НДС).</td>
+                <td>-</td>
+            </tr>
+            <tr>
+               
+                <td colspan="5">Всего к оплате</td>
+                <td id="totalToPay"><span id="totalToPay"></span> $</td>
+            </tr>
+        </table>
+        <strong>Example: <a href="https://qucu.ru/landing-page-development.html">langing page from figma layout</a></strong>
         <section>
             <div id="sigCommentsBlock"></div>
             <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
@@ -321,5 +355,6 @@
     </main>
     <!-- <script src="site/js/language.js"></script> -->
     <script defer src="../site/js/main.js"></script>
+    <script src="calc.js"></script>
 </body>
 </html>
