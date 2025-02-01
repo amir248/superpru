@@ -1,6 +1,5 @@
 async function onClicToButton(){
-    const url =
-    "https://data.fixer.io/api/fluctuation?access_key={0266c5b8751d14ff26d7b63ace6b4c33}&symbols=USD&start_date=2025-01-01&end_date=2025-02-01";
+    const url ="http://data.fixer.io/api/latest?access_key = 0266c5b8751d14ff26d7b63ace6b4c33";
 const options = {
     method: "GET",
 };
