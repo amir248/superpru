@@ -1,5 +1,6 @@
 let slides='';
 document.querySelector('#slides').addEventListener('click',countPrice);
+document.querySelector('#price').addEventListener('click',countPrice);
 function countPrice(){
     let value=document.querySelector('#slides').value;
     let price=document.querySelector('#price').value;
