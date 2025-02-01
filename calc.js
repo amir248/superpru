@@ -8,7 +8,7 @@ function countPrice(){
     let oK=document.querySelector('#summa').innerHTML=`${summa}`;
     let oKtwo=document.querySelector('#summaTwo').innerHTML=`${summa}`;
     let totalToPay=document.querySelector('#totalToPay').innerHTML=`${summa}`;
-
+    let oneSlice=document.querySelector('#oneSlide').innerHTML=`${price}`
     console.log(value);
     console.log(summa);
     console.log(price);
