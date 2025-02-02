@@ -29,6 +29,14 @@
             max-width:1300px;
             margin-right:auto;
             margin-left:auto;
+            display:flex;
+            justify-content: flex-start;
+            align-items: baseline;
+
+        }
+        aside{
+            position: sticky;
+            top:0;
         }
         main > article{
             width:100%;
@@ -184,6 +192,15 @@
             width:100%;
             max-width: 900px;
         }
+        footer{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            background-color:#272727;
+            min-height: 70px;
+            color:white;
+        }
     </style>
 </head>
 <body>
@@ -252,8 +269,8 @@
                 
                 </tr>
                 <tr>
-                    <td>Запуск контукстной рекламы google:</td>
-                    <td>~1 день - 1 неделя</td>
+                    <td>Запуск контeкстной рекламы google:</td>
+                    <td>~1 неделя - 3 месяцов</td>
                     <td>2000$</td>
                 
                 </tr>
@@ -303,7 +320,7 @@
                 </tr>
                 <tr>
                 <td>Launching Google contextual advertising:</td>
-                <td>~1 day - 1 week</td>
+                <td>~1 week - 3 months</td>
                 <td>$2000</td>
                 
                 </tr>
@@ -421,15 +438,20 @@
 
         </section>
         <button id="buttonPrice">price</button>
-        <section>
+        <footer>
             <span>Ⓒ</span> <strong>всЁ прАвА защишЁнЫ</strong> <span> <a href="https://qucu.ru" title="web workshop named after baron saytoverstausen">🤓</a></span>
-    <div id="data"></div>
+            <div id="data"></div>
+        </footer>
+        <section>
+           
         </section>
         </article>
+        <aside>
+            <fxwidget-er inverse="false" amount="1" decimals="2" large="false" shadow="true" symbol="true" flag="true" changes="true" grouping="true" border="false" main-curr="USD" sel-curr="BTC,EUR,USD,CNY,RUB" background-color="#4b5320" lang="en"></fxwidget-er><a href="https://currencyrate.today/">CurrencyRate</a><script async src="https://s.fx-w.io/widgets/exchange-rates/latest.js?en"></script>
+        </aside>
     </main>
     <!-- <script src="site/js/language.js"></script> -->
     <script defer src="../site/js/main.js"></script>
     <script src="calc.js"></script>
-    <script src="price.js"></script>
 </body>
 </html>
