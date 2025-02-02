@@ -1,4 +1,4 @@
-const d = new Date();
+var d = new Date();
 console.log(d.getDay() + " " +d.getFullYear());
 document.querySelector('#data').innerHTML=`${d.getFullYear()}`;
 let day=d.getDay();

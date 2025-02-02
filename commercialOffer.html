@@ -239,6 +239,25 @@
         #letsGoToPrint{
             margin:3%;
         }
+        #letsGoToPrint{
+            background: #272727;
+            border:3px solid black;
+            color:yellow;
+            text-shadow:green 1px 1px;
+            font-size:23px;
+            border-radius: 17px;
+            transition: ease 1s;
+        }
+        #letsGoToPrint:hover{
+            background: yellow;
+            color:#272727;
+            border: 3px solid green;
+        }
+        @media print {
+            #letsGoToPrint{
+                display:none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -531,7 +550,7 @@
             </tr>
             </table>
             <div>
-                <button id="letsGoToPrint">let's go to print</button>
+                <button id="letsGoToPrint" title="Оставить одну фактуру без текста для печати">let's go to print</button>
             </div>
         <strong>Example: <a href="https://qucu.ru/landing-page-development.html">langing page from figma layout</a></strong>
         <section>
