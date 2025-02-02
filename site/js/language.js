@@ -14,9 +14,9 @@ function onClickId(){
             rus[i].style.display='none';
         }
     }else{
-        for(let i=0;i<=eng.length;i++){
-            eng[i].style.display='none';
-            rus[i].style.display='block';
+        for(let y=0;y<=eng.length;y++){
+            eng[y].style.display='none';
+            rus[y].style.display='block';
         }
     }
 }
