@@ -5,10 +5,10 @@ let chi=document.querySelectorAll('#chi');
 
 language.addEventListener('click',onClickId);
 function onClickId(){
-    console.log('oK ' + window.location.href);
+    // console.log('oK ' + window.location.href);
    
     if(document.querySelector('#language > input').checked){
-        console.log('CheckBoxChecked');
+        // console.log('CheckBoxChecked');
         for(let i=0;i<=eng.length;i++){
             eng[i].style.display='block';
             rus[i].style.display='none';
