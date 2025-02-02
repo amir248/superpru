@@ -40,6 +40,7 @@
         document.querySelector('body > main:nth-child(1) > article:nth-child(1) > strong:nth-child(18)').style.display="none";
     
         document.querySelector('#letsGoToPrint').innerHTML=`go back`;
+        onClickId();
     }else{
         console.log('print')
     document.querySelector('article > nav').style.display="";
@@ -80,6 +81,7 @@
 
     document.querySelector('#letsGoToPrint').innerHTML=`let's go to print`;
     countClick=0;
+    onClickId();
     }
     
 }
