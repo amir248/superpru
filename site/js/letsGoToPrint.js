@@ -7,6 +7,15 @@
         document.querySelector('article > fieldset').style.display="none";
         document.querySelector('body > main > article > i').style.display="none";
         document.querySelector('body > main > article > i').style.display="none";
+
+        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > i:nth-child(3)').style.display="none";
+        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > table:nth-child(5)').style.display="none";
+        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > p:nth-child(8)').style.display="none";
+        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > h2:nth-child(9)').style.display="none";
+        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > p:nth-child(14)').style.display="none";
+        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > p:nth-child(15)').style.display="none";
+        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > strong:nth-child(18)').style.display="none";
+
         document.querySelector('body > main > article > table').style.display="none";
         document.querySelector('body > main > article > table').style.display="none";
         document.querySelector('body > main > article > i').style.display="none";
@@ -47,6 +56,15 @@
     document.querySelector('article > fieldset').style.display="";
     document.querySelector('body > main > article > i').style.display="";
     document.querySelector('body > main > article > i').style.display="";
+
+    document.querySelector('body > main:nth-child(1) > article:nth-child(1) > i:nth-child(3)').style.display="";
+        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > table:nth-child(5)').style.display="";
+        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > p:nth-child(8)').style.display="";
+        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > h2:nth-child(9)').style.display="";
+        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > p:nth-child(14)').style.display="";
+        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > p:nth-child(15)').style.display="";
+        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > strong:nth-child(18)').style.display="";
+
     document.querySelector('body > main > article > table').style.display="";
     document.querySelector('body > main > article > table').style.display="";
     document.querySelector('body > main > article > i').style.display="";
