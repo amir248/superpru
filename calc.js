@@ -15,3 +15,20 @@ function countPrice(){
     // return oK;
 };
 countPrice();
+
+document.querySelector('#slidesEng').addEventListener('click',countPriceEng);
+document.querySelector('#priceEng').addEventListener('click',countPriceEng);
+function countPriceEng(){
+    let valueEng=document.querySelector('#slidesEng').value;
+    let priceEng=document.querySelector('#priceEng').value;
+    let summaEng=valueEng * priceEng;
+    let oKeng=document.querySelector('#summaEng').innerHTML=`${summaEng}`;
+    let oKtwoEng=document.querySelector('#summaTwoEng').innerHTML=`${summaEng}`;
+    let totalToPayEng=document.querySelector('#totalToPayEng').innerHTML=`${summaEng}`;
+    let oneSliceEng=document.querySelector('#oneSlideEng').innerHTML=`${priceEng}`
+    console.log(valueEng);
+    console.log(summaEng);
+    console.log(priceEng);
+    // return oK;
+};
+countPriceEng();
