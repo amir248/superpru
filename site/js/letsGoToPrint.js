@@ -99,7 +99,7 @@
 
     document.querySelector('#letsGoToPrint').innerHTML=`let's go to print`;
     countClick=0;
-    onClickId();
+    // onClickId();
     }
     
 }
