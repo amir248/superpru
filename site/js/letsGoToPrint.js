@@ -8,7 +8,7 @@
         document.querySelector('body > main > article > i').style.display="none";
         document.querySelector('body > main > article > i').style.display="none";
 
-        document.querySelector('body > main:nth-child(1) > article:nth-child(1) > i:nth-child(3)').style.display="none";
+        // document.querySelector('body > main:nth-child(1) > article:nth-child(1) > i:nth-child(3)').style.display="none";
         document.querySelector('body > main:nth-child(1) > article:nth-child(1) > table:nth-child(5)').style.display="none";
         document.querySelector('body > main:nth-child(1) > article:nth-child(1) > p:nth-child(8)').style.display="none";
         document.querySelector('body > main:nth-child(1) > article:nth-child(1) > h2:nth-child(9)').style.display="none";
