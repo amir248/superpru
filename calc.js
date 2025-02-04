@@ -74,13 +74,13 @@ function countPrice(){
     }
     let google;
     if(document.querySelector('#google').checked==true){
-        google=150;
+        google=200;
     }else{
         google=0;
     }
     let yandex;
     if(document.querySelector('#yandex').checked==true){
-        yandex=200;
+        yandex=150;
     }else{
         yandex=0;
     }
