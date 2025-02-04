@@ -5,6 +5,47 @@ document.querySelector('#oneSlideo').addEventListener('click',countPrice);
 document.querySelector('#slidesEng').addEventListener('click',countPrice);
 document.querySelector('#priceEng').addEventListener('click',countPrice);
 document.querySelector('#oneSlideoEng').addEventListener('click',countPrice);
+addEventListener("keyup", (event) => {
+    // console.log(event);
+    countPrice();
+    let sumOk;
+    if(document.querySelector('#price').value==1){
+  
+        document.querySelector('#summa').innerHTML=sumOk;
+    }else if(document.querySelector('#price').value==2){
+        
+        document.querySelector('#summa').innerHTML=sumOk;
+        sumOk=document.querySelector('#price').value*5;
+    }else if(document.querySelector('#price').value==3){
+
+        sumOk=document.querySelector('#price').value*5;
+    }else if(document.querySelector('#price').value==4){
+       
+        document.querySelector('#summa').innerHTML=sumOk;
+        sumOk=document.querySelector('#price').value*5;
+    }
+    if(document.querySelector('#priceEng').value==1){
+      
+        // document.querySelector('#price').value.innerHTML=5;
+        // sumOk=document.querySelector('#price').value*5;
+        // console.log(document.querySelector('#priceEng').value);
+        document.querySelector('#summaEng').innerHTML=sumOk;
+    }else if(document.querySelector('#priceEng').value==2){
+        
+        document.querySelector('#summaEng').innerHTML=sumOk;
+        sumOk=document.querySelector('#priceEng').value*5;
+    }else if(document.querySelector('#priceEng').value==3){
+        
+        document.querySelector('#summaEng').innerHTML=sumOk;
+        sumOk=document.querySelector('#priceEng').value*5;
+    }else if(document.querySelector('#priceEng').value==4){
+     
+        document.querySelector('#summaEng').innerHTML=sumOk;
+        sumOk=document.querySelector('#priceEng').value*5;
+    }
+});
+
+
 function countPrice(){
     let value=document.querySelector('#slides').value;
     let price;

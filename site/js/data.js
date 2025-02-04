@@ -1,5 +1,5 @@
 const d = new Date();
-console.log(d.getDay() + " " +d.getFullYear());
+// console.log(d.getDay() + " " +d.getFullYear());
 let year=d.getFullYear();
 document.querySelector('#data').innerHTML=`${year}`;
 // let day=d.getDay();

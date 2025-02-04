@@ -2,7 +2,7 @@
     function goToPrint(){
         countClick++;
     if(countClick==1){
-        console.log('print')
+        // console.log('print')
         document.querySelector('article > nav').style.display="none";
         document.querySelector('article > fieldset').style.display="none";
         document.querySelector('body > main > article > i').style.display="none";
@@ -50,7 +50,7 @@
     
         document.querySelector('#letsGoToPrint').innerHTML=`go back`;
     }else{
-        console.log('print')
+        // console.log('print')
     document.querySelector('article > nav').style.display="";
     document.querySelector('article > fieldset').style.display="";
     document.querySelector('body > main > article > i').style.display="";
@@ -98,13 +98,13 @@
 
     document.querySelector('#letsGoToPrint').innerHTML=`let's go to print`;
     countClick=0;
-    onClickId();
+    // onClickId();
     }
     
 }
 document.querySelector("#letsGoToPrint").addEventListener('click',()=>{
     goToPrint();
 })
-document.querySelector('main').addEventListener('click',()=>{
+// document.querySelector('main').addEventListener('click',()=>{
 
-});
+// });
