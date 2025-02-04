@@ -115,7 +115,7 @@
 
     
     countClick=0;
-    // onClickId();
+    onClickId();
     }
     
 }
