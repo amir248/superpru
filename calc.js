@@ -62,19 +62,19 @@ function countPrice(){
     }
     let seo;
     if(document.querySelector('#seo').checked==true){
-        seo=100;
+        seo=10;
     }else{
         seo=0;
     }
     let semanticCore;
     if(document.querySelector('#semanticCore').checked==true){
-        semanticCore=100;
+        semanticCore=10;
     }else{
         semanticCore=0;
     }
     let google;
     if(document.querySelector('#google').checked==true){
-        google=200;
+        google=150;
     }else{
         google=0;
     }
@@ -100,13 +100,13 @@ function countPrice(){
     }
     let seoEng;
     if(document.querySelector('#seoEng').checked==true){
-        seoEng=100;
+        seoEng=10;
     }else{
         seoEng=0;
     }
     let semanticCoreEng;
     if(document.querySelector('#semanticCoreEng').checked==true){
-        semanticCoreEng=100;
+        semanticCoreEng=10;
     }else{
         semanticCoreEng=0;
     }
@@ -118,7 +118,7 @@ function countPrice(){
     }
     let yandexEng;
     if(document.querySelector('#yandexEng').checked==true){
-        yandexEng=200;
+        yandexEng=150;
     }else{
         yandexEng=0;
     }
