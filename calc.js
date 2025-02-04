@@ -90,9 +90,7 @@ function countPrice(){
     let oKtwo=document.querySelector('#summaTwo').innerHTML=`${fullSumma}`;
     let totalToPay=document.querySelector('#totalToPay').innerHTML=`${fullSumma}`;
     let oneSlice=document.querySelector('#oneSlide').innerHTML=`${price}`
-    console.log(value);
-    console.log(summa);
-    console.log(price);
+    
     // return oK;
 
 
@@ -106,9 +104,7 @@ function countPrice(){
     let oKtwoEng=document.querySelector('#summaTwoEng').innerHTML=`${fullSummaEng}`;
     let totalToPayEng=document.querySelector('#totalToPayEng').innerHTML=`${fullSummaEng}`;
     let oneSliceEng=document.querySelector('#oneSlideoEng').innerHTML=`${fullSummaEng}`
-    console.log(valueEng);
-    console.log(summaEng);
-    console.log(priceEng);
+  
     // return oK;
 };
 countPrice();
