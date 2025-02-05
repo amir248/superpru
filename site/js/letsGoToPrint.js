@@ -14,6 +14,7 @@
         document.querySelector('#invoicing > footer:nth-child(9)').style.display="none";
         document.querySelector('#invoicing > footer').style.display="none";
         document.querySelector('#letsGoToPrint').innerHTML='go back';
+        onClickId();
     }else{
         // console.log('print')
         document.querySelector('body > main > article > nav').style.display="";
