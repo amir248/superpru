@@ -131,31 +131,32 @@
             align-items: center;
             flex-direction: column;
         }
-        main > article > p, main > article > strong{
+        .notPrint > p, main > article > p, main > article > strong{
             margin:1%;
         }
         article > table{
             border:3px solid black;
         }
-        body > main > article > table > tbody > tr > td:nth-child(2){
+        .notPrint > table > tbody > tr > td:nth-child(2){
             background-color: rgb(150, 128, 101);
             color:white;
             text-shadow:1px 1px black;
         }
-        body > main > article > table > tbody > tr > td:nth-child(3){
+        .notPrint > table > tbody > tr > td:nth-child(3){
             background-color: green;
             color:white;
             text-shadow:black 1px 1px;
         }
-        body > main:nth-child(1) > article:nth-child(1) > table:nth-child(5) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2),body > main:nth-child(1) > article:nth-child(1) > table:nth-child(6) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2){
+        .notPrint > table:nth-child(5) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2),.notPrint > table:nth-child(6) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2){
             background-color: green;
             font-size:30px;
         }
-        body > main:nth-child(1) > article:nth-child(1) > table:nth-child(5) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1),body > main > article > table > tbody > tr > td{
+        .notPrint > table:nth-child(5) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1),.notPrint > table > tbody > tr > td{
             text-align: center;
             font-size:30px;
         }
-        body > main > article > table > tbody > tr > td{
+        
+        .notPrint > table > tbody > tr > td{
             border-bottom:1px solid black;
         }
         /* body > main > article > table, tbody, tr, td,body > main > article > table{
@@ -163,7 +164,7 @@
             margin:0;
         } */
         @media(max-width:590px){
-            body > main > article > section > table > tbody > tr{
+            .notPrint > section > table > tbody > tr{
                 font-size:10px;
             }
             .flex-boxing > div > table > tbody > tr{
@@ -171,20 +172,23 @@
             }
         }
          @media(max-width:700px){
-            body > main > article > table > tbody > tr > td{
+            .notPrint > table > tbody > tr > td{
                 font-size:15px;
             }
-            body > main > article > table{
+            .notPrint > table{
                 font-size:15px;
             }
-            main > article > article > table{
+            .notPrint > table{
                 font-size:15px;
             }
-            body > main > article > table > tbody > tr{
+            .notPrint > table > tbody > tr{
                 font-size:15px;
+            }
+            #invoice > tbody > tr, td {
+                font-size: 15px;
             }
          }
-         body > main > article > section{
+         .notPrint > section{
             width:100%;
         }
         nav{
@@ -267,7 +271,7 @@
         }
 
 
-        body > main:nth-child(1) > article:nth-child(1) > section:nth-child(20) > div:nth-child(2){
+        .notPrint > section:nth-child(20) > div:nth-child(2){
             justify-content: space-around;
 
         }
@@ -345,6 +349,9 @@
             /* body > main > article > section > h2{
                 display:none;
             } */
+            .notPrint{
+                display:none;
+            }
             #invoicing > div:nth-child(6){
                 display:none;
             }
@@ -387,171 +394,177 @@
                     <input type="checkbox">
                 </label>
             </fieldset>
-                <!-- <h2 id="rus">Разумная цена на целевую страницу</h2>
-                <h2 id="eng">Reasonable price for landing page</h2> -->
-            <i id="rus">Чтобы лишний раз не редактировать цены, валюта указана в долларах “ $ “, даже есть возможность принимать средства в любых валютах, но! Лучше в рублях, т.к. конвертация стоит дорого и самая стабильная валюта “сверхдержавы”, ведет себя очень стабильно(уверенно стабильно падает и не поднимается). Поэтому зная все прелести стабильного постапокалипсиса, цены указаны в $.</i>
-            <i id="eng">To avoid editing prices once again, the currency is indicated in dollars “ $ “, it is even possible to accept funds in any currencies, but! Better in rubles, because conversion is expensive and the most stable currency of the “superpower” behaves very stably (it confidently falls and does not rise). Therefore, knowing all the delights of a stable post-apocalypse, the prices are indicated in $.</i>
-            <table id="eng">
-                <tr>
-                  <td colspan="2">Offer</td>
-                  <td>Price</td>
-                  <td></td>
-                
-                </tr>
-                <tr>
-                  <td>
-                    <label>
-                        Consultation <input type="checkbox" id="consultationEng">:
-                    </label>
-                  </td>
-                  <td>~1 hour</td>
-                  <td>100$</td>
-                
-                </tr>
-                <tr>
-                    <td>Landing page based on the figma layout, 1 slide:</td>
-                    <td>~1 min - 30 minutes</td>
-                    <td>5$</td>
-                   
-                  </tr>
-                <tr>
-                  <td>Landing page based on the figma layout, 3 slides:</td>
-                  <td>~15 min - 1.5 hours</td>
-                  <td>15$</td>
-                 
-                </tr>
-                <tr>
-                  <td>
-                    <label>
-                        SEO optimization site: <input type="checkbox" id="seoEng">
-                    </label>
-                  </td>
-                  <td> ~1 day - 1 week</td>
-                  <td>10$</td>
-                 
-                </tr>
-                <tr>
-                  <td>
-                    <label>
-                        Collecting key queries, compiling a semantic core: <input type="checkbox" id="semanticCoreEng">
-                    </label>
-                  </td>
-                  <td>~1 day - 1 week</td>
-                  <td>10$</td>
-                 
-                </tr>
-                <tr>
+            <div class="notPrint">
+                <h2 id="rus">Разумная цена на целевую страницу</h2>
+                <h2 id="eng">Reasonable price for landing page</h2>
+                <i id="rus">Чтобы лишний раз не редактировать цены, валюта указана в долларах “ $ “, даже есть возможность принимать средства в любых валютах, но! Лучше в рублях, т.к. конвертация стоит дорого и самая стабильная валюта “сверхдержавы”, ведет себя очень стабильно(уверенно стабильно падает и не поднимается). Поэтому зная все прелести стабильного постапокалипсиса, цены указаны в $.</i>
+                <i id="eng">To avoid editing prices once again, the currency is indicated in dollars “ $ “, it is even possible to accept funds in any currencies, but! Better in rubles, because conversion is expensive and the most stable currency of the “superpower” behaves very stably (it confidently falls and does not rise). Therefore, knowing all the delights of a stable post-apocalypse, the prices are indicated in $.</i>
+
+                <table id="eng">
+                    <tr>
+                      <td colspan="2">Offer</td>
+                      <td>Price</td>
+                      <td></td>
+                    
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                            Consultation <input type="checkbox" id="consultationEng">:
+                        </label>
+                      </td>
+                      <td>~1 hour</td>
+                      <td>100$</td>
+                    
+                    </tr>
+                    <tr>
+                        <td>Landing page based on the figma layout, 1 slide:</td>
+                        <td>~1 min - 30 minutes</td>
+                        <td>5$</td>
+                       
+                      </tr>
+                    <tr>
+                      <td>Landing page based on the figma layout, 3 slides:</td>
+                      <td>~15 min - 1.5 hours</td>
+                      <td>15$</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                            SEO optimization site: <input type="checkbox" id="seoEng">
+                        </label>
+                      </td>
+                      <td> ~1 day - 1 week</td>
+                      <td>10$</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>
+                            Collecting key queries, compiling a semantic core: <input type="checkbox" id="semanticCoreEng">
+                        </label>
+                      </td>
+                      <td>~1 day - 1 week</td>
+                      <td>10$</td>
+                     
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                Launching Yandex contextual advertising <input type="checkbox" id="yandexEng"> :
+                            </label>
+                        </td>
+                        <td>~1 day - 1 week</td>
+                        <td>150$</td>
+                    
+                    </tr>
+                    <tr>
+                        <td>Launching Google contextual advertising:<input type="checkbox" id="googleEng">:</td>
+                        <td>~1 week - 3 months</td>
+                        <td>200$</td>
+                    
+                    </tr>
+                  </table>
+                  <table id="rus">
+                    <tr>
+                    <td colspan="2">Offer</td>
+                    <td>Price</td>
+                    <td></td>
+                    
+                    </tr>
+                    <tr>
+                        
                     <td>
                         <label>
-                            Launching Yandex contextual advertising <input type="checkbox" id="yandexEng"> :
+                            Консультация <input type="checkbox" id="consultation">:
+                        </label>
+                    </td>
+                    <td>~1 hour</td>
+                    <td>$100</td>
+                    
+                    </tr>
+                    <tr>
+                    <td>Лендинг пейдж по макету Figma 1 слайд:</td>
+                    <td>~1 min - 30 minutes</td>
+                    <td>$5</td>
+                    
+                    </tr>
+                    <tr>
+                    <td>Лендинг пейдж по макету Figma, 3 слайда:</td>
+                    <td>~15 min - 1.5 hours</td>
+                    <td>$15</td>
+                    
+                    </tr>
+                    <tr>
+                    <td>
+                        <label>
+                            SEO оптимизация: <input type="checkbox" id="seo">
                         </label>
                     </td>
                     <td>~1 day - 1 week</td>
-                    <td>150$</td>
-                
-                </tr>
-                <tr>
-                    <td>Launching Google contextual advertising:<input type="checkbox" id="googleEng">:</td>
-                    <td>~1 week - 3 months</td>
-                    <td>200$</td>
-                
-                </tr>
-              </table>
-              <table id="rus">
-                <tr>
-                <td colspan="2">Offer</td>
-                <td>Price</td>
-                <td></td>
-                
-                </tr>
-                <tr>
+                    <td>$10</td>
                     
-                <td>
-                    <label>
-                        Консультация <input type="checkbox" id="consultation">:
-                    </label>
-                </td>
-                <td>~1 hour</td>
-                <td>$100</td>
-                
-                </tr>
-                <tr>
-                <td>Лендинг пейдж по макету Figma 1 слайд:</td>
-                <td>~1 min - 30 minutes</td>
-                <td>$5</td>
-                
-                </tr>
-                <tr>
-                <td>Лендинг пейдж по макету Figma, 3 слайда:</td>
-                <td>~15 min - 1.5 hours</td>
-                <td>$15</td>
-                
-                </tr>
-                <tr>
-                <td>
-                    <label>
-                        SEO оптимизация: <input type="checkbox" id="seo">
-                    </label>
-                </td>
-                <td>~1 day - 1 week</td>
-                <td>$10</td>
-                
-                </tr>
-                <tr>
-                <td>
-                    <label>
-                        Сбор ключевых слов, составление семантического ядра: <input type="checkbox" id="semanticCore">
-                    </label>
-                </td>
-                <td>~1 day - 1 week</td>
-                <td>$10</td>
-                
-                </tr>
-                <tr>
-                <td>
-                    <label>
-                        Закуск конткестной рекламы яндекс <input type="checkbox" id="yandex"> :
-                    </label>
-                </td>
-                <td>~1 day - 1 week</td>
-                <td>$150</td>
-                
-                </tr>
-                <tr>
-                <td>
-                    <label>
-                        Запуск контестной рекламы google <input type="checkbox" id="google">:
-                    </label>
-                </td>
-                <td>~1 week - 3 months</td>
-                <td>$200</td>
-                
-                </tr>
-                </table>
-            <i id="eng">To avoid editing prices once again, the currency is indicated in dollars "$", it is even possible to accept funds in any currencies, but! Better in rubles, because conversion is expensive and the most stable currency of the "superpower" behaves very stably (confidently steadily falls and does not rise). Therefore, knowing all the delights of a stable post-apocalypse, the prices are indicated in $.</i>
-            <p id="rus">Цены на целевую страницы от 5$ потому что в США - лендинг по макету из фирмы стоит всего 50 долларов. Поэтому в Раше цену можно устанавливать в 5 долларов за один слайд.</p>
-            <h2 id="rus">Заказать сайт по макету из фигмы за 15$</h2>
-
-             <!-- Eng language  -->
-             <p id="eng">Prices for landing pages from $5 because in the US, a landing page based on a company layout costs only $15. Therefore, in Russia, the price can be set at $5 per slide.</p>
-             <h2 id="eng">Order a website based on a figma layout for $15</h2>
-
-            <img src="../site/img/superPower.png" alt="How much money langing page in USA">
-            <strong>
-                <h3>If you Search in Google </h3>
-                <p>Rus: <a href="https://www.google.com/search?client=ubuntu-sn&channel=fs&q=%D0%A1%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE+%D1%81%D1%82%D0%BE%D0%B8%D1%82+%D0%BB%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3+%D0%B2+%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B5"> сколько стоит лендинг пейдж в Америке</a></p>
-                <p>Eng: <a href="https://www.google.com/search?q=how+mauch+money+landing+page+in+USA&oq=how+mauch+money+landing+page+in+USA&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTE5MDc5ajBqMagCALACAQ&sourceid=chrome&ie=UTF-8&sei=CcuRZ4iKIsDGwPAP8NPw8AM">how mauch money landing page in USA</a></p>
-            </strong>
-            <p id="rus">Если небольшой сайт с 3 слайдами по макету из фирмы запущенный на гитхаб с адаптивной версткой, то это реальная цена. В виду того что программистов в России слишком много, но “закон прожиточный минимум” запрещает Человеку получать свыше 500 коммунистических недоразумений в сутки(что равно 5$), иначе любой купит билет на самолет и со словами “прощай нищета”, станет уважаемым эмигрантом. А фразу "прощай нищета", "великая" инквизицая, свобдно может квалифицировать как "гос измена" (великая госизмена)! Дальше все стабильно: "изолятор временного содержания, суд - где присуждают штраф или же, суровое наказание в виде лишения свободы. И тюремная надзирательница будет кричать: "так Ганс, Грувер, несите <a href="https://www.google.com/search?q=%D1%84%D0%BB%D1%8E%D0%B3%D0%B5%D0%B3%D0%B5%D1%85%D0%B0%D0%B9%D0%BC%D0%B5%D0%BD&sca_esv=5a0334d7f5ed8bb6&sxsrf=AHTn8zqxhiam4sSoyRGJDkIdU3t17_hGEg%3A1738475186279&ei=sgafZ83eELCrwPAPyMbLoAc&ved=0ahUKEwjN_7bfpKSLAxWwFRAIHUjjEnQQ4dUDCBA&uact=5&oq=%D1%84%D0%BB%D1%8E%D0%B3%D0%B5%D0%B3%D0%B5%D1%85%D0%B0%D0%B9%D0%BC%D0%B5%D0%BD&gs_lp=Egxnd3Mtd2l6LXNlcnAiGtGE0LvRjtCz0LXQs9C10YXQsNC50LzQtdC9MgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMg0QABiABBiwAxhDGIoFSJMjUI4IWMMhcAF4AZABAJgBXqAB6AKqAQE0uAEDyAEA-AEBmAIFoALXA8ICBxAjGLACGCfCAgcQABiABBgNwgIGEAAYDRgewgIIEAAYChgNGB7CAgoQIxiABBgnGIoFwgIIEAAYgAQYywGYAwDiAwUSATEgQIgGAZAGCZIHAzEuNKAH6SI&sclient=gws-wiz-serp">флюгегехаймен</a>"! И по старой протоптаной схеме заражают: "спидом, гепатитом и последней стадией туберкулеза". <span style="font-size:33px;float:right;">😱</span></p>
-
-           
-
-           <!-- Eng language  -->
-            <p id="eng">If a small site with 3 slides on a layout from a company launched on GitHub with adaptive layout, then this is a real price. Considering that there are too many programmers in Russia, but the “living wage law” prohibits a person from receiving more than 500 communist misunderstandings per day (which is equal to $ 5), otherwise anyone will buy a plane ticket and with the words “goodbye poverty”, will become a respected emigrant. And the phrase “goodbye poverty”, the “great” inquisition, can freely qualify as “high treason” (great high treason)! Then everything is stable: “temporary detention center, court - where they award a fine or a severe punishment in the form of imprisonment. And the prison warden will shout: “so Hans, Gruver, bring <a href="https://www.google.com/search?q=%D1%84%D0%BB%D1%8E%D0%B3%D0%B5%D0%B3%D0%B5%D1%85%D0%B0%D0%B9%D0%BC%D0%B5%D0%BD&sca_esv=5a0334d7f5ed8bb6&sxsrf=AHTn8zqxhiam4sSoyRGJDkIdU3t17_hGEg%3A1738475186279&ei=sgafZ83eELCrwPAPyMbLoAc&ved=0ahUKEwjN_7bfpKSLAxWwFRAIHUjjEnQQ4dUDCBA&uact=5&oq=%D1%84%D0%BB%D1%8E%D0%B3%D0%B5%D0%B3%D0%B5%D1%85%D0%B0%D0%B9%D0%BC%D0%B5%D0%BD&gs_lp=Egxnd3Mtd2l6LXNlcnAiGtGE0LvRjtCz0LXQs9C10YXQsNC50LzQtdC9MgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMg0QABiABBiwAxhDGIoFSJMjUI4IWMMhcAF4AZABAJgBXqAB6AKqAQE0uAEDyAEA-AEBmAIFoALXA8ICBxAjGLACGCfCAgcQABiABBgNwgIGEAAYDRgewgIIEAAYChgNGB7CAgoQIxiABBgnGIoFwgIIEAAYgAQYywGYAwDiAwUSATEgQIgGAZAGCZIHAzEuNKAH6SI&sclient=gws-wiz-serp">flugegeheimen</a>"! And according to the old well-trodden scheme they infect: "with AIDS, hepatitis and the last stage of tuberculosis." <span style="font-size:33px;float:right;">😱</span></p>
+                    </tr>
+                    <tr>
+                    <td>
+                        <label>
+                            Сбор ключевых слов, составление семантического ядра: <input type="checkbox" id="semanticCore">
+                        </label>
+                    </td>
+                    <td>~1 day - 1 week</td>
+                    <td>$10</td>
+                    
+                    </tr>
+                    <tr>
+                    <td>
+                        <label>
+                            Закуск конткестной рекламы яндекс <input type="checkbox" id="yandex"> :
+                        </label>
+                    </td>
+                    <td>~1 day - 1 week</td>
+                    <td>$150</td>
+                    
+                    </tr>
+                    <tr>
+                    <td>
+                        <label>
+                            Запуск контестной рекламы google <input type="checkbox" id="google">:
+                        </label>
+                    </td>
+                    <td>~1 week - 3 months</td>
+                    <td>$200</td>
+                    
+                    </tr>
+                    </table>
+                <i id="eng">To avoid editing prices once again, the currency is indicated in dollars "$", it is even possible to accept funds in any currencies, but! Better in rubles, because conversion is expensive and the most stable currency of the "superpower" behaves very stably (confidently steadily falls and does not rise). Therefore, knowing all the delights of a stable post-apocalypse, the prices are indicated in $.</i>
+                <p id="rus">Цены на целевую страницы от 5$ потому что в США - лендинг по макету из фирмы стоит всего 50 долларов. Поэтому в Раше цену можно устанавливать в 5 долларов за один слайд.</p>
+                <h2 id="rus">Заказать сайт по макету из фигмы за 15$</h2>
+    
+                 <!-- Eng language  -->
+                 <p id="eng">Prices for landing pages from $5 because in the US, a landing page based on a company layout costs only $15. Therefore, in Russia, the price can be set at $5 per slide.</p>
+                 <h2 id="eng">Order a website based on a figma layout for $15</h2>
+    
+                <img src="../site/img/superPower.png" alt="How much money langing page in USA">
+                <strong>
+                    <h3>If you Search in Google </h3>
+                    <p>Rus: <a href="https://www.google.com/search?client=ubuntu-sn&channel=fs&q=%D0%A1%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE+%D1%81%D1%82%D0%BE%D0%B8%D1%82+%D0%BB%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3+%D0%B2+%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B5"> сколько стоит лендинг пейдж в Америке</a></p>
+                    <p>Eng: <a href="https://www.google.com/search?q=how+mauch+money+landing+page+in+USA&oq=how+mauch+money+landing+page+in+USA&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTE5MDc5ajBqMagCALACAQ&sourceid=chrome&ie=UTF-8&sei=CcuRZ4iKIsDGwPAP8NPw8AM">how mauch money landing page in USA</a></p>
+                </strong>
+                <p id="rus">Если небольшой сайт с 3 слайдами по макету из фирмы запущенный на гитхаб с адаптивной версткой, то это реальная цена. В виду того что программистов в России слишком много, но “закон прожиточный минимум” запрещает Человеку получать свыше 500 коммунистических недоразумений в сутки(что равно 5$), иначе любой купит билет на самолет и со словами “прощай нищета”, станет уважаемым эмигрантом. А фразу "прощай нищета", "великая" инквизицая, свобдно может квалифицировать как "гос измена" (великая госизмена)! Дальше все стабильно: "изолятор временного содержания, суд - где присуждают штраф или же, суровое наказание в виде лишения свободы. И тюремная надзирательница будет кричать: "так Ганс, Грувер, несите <a href="https://www.google.com/search?q=%D1%84%D0%BB%D1%8E%D0%B3%D0%B5%D0%B3%D0%B5%D1%85%D0%B0%D0%B9%D0%BC%D0%B5%D0%BD&sca_esv=5a0334d7f5ed8bb6&sxsrf=AHTn8zqxhiam4sSoyRGJDkIdU3t17_hGEg%3A1738475186279&ei=sgafZ83eELCrwPAPyMbLoAc&ved=0ahUKEwjN_7bfpKSLAxWwFRAIHUjjEnQQ4dUDCBA&uact=5&oq=%D1%84%D0%BB%D1%8E%D0%B3%D0%B5%D0%B3%D0%B5%D1%85%D0%B0%D0%B9%D0%BC%D0%B5%D0%BD&gs_lp=Egxnd3Mtd2l6LXNlcnAiGtGE0LvRjtCz0LXQs9C10YXQsNC50LzQtdC9MgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMg0QABiABBiwAxhDGIoFSJMjUI4IWMMhcAF4AZABAJgBXqAB6AKqAQE0uAEDyAEA-AEBmAIFoALXA8ICBxAjGLACGCfCAgcQABiABBgNwgIGEAAYDRgewgIIEAAYChgNGB7CAgoQIxiABBgnGIoFwgIIEAAYgAQYywGYAwDiAwUSATEgQIgGAZAGCZIHAzEuNKAH6SI&sclient=gws-wiz-serp">флюгегехаймен</a>"! И по старой протоптаной схеме заражают: "спидом, гепатитом и последней стадией туберкулеза". <span style="font-size:33px;float:right;">😱</span></p>
+     <!-- Eng language  -->
+     <p id="eng">If a small site with 3 slides on a layout from a company launched on GitHub with adaptive layout, then this is a real price. Considering that there are too many programmers in Russia, but the “living wage law” prohibits a person from receiving more than 500 communist misunderstandings per day (which is equal to $ 5), otherwise anyone will buy a plane ticket and with the words “goodbye poverty”, will become a respected emigrant. And the phrase “goodbye poverty”, the “great” inquisition, can freely qualify as “high treason” (great high treason)! Then everything is stable: “temporary detention center, court - where they award a fine or a severe punishment in the form of imprisonment. And the prison warden will shout: “so Hans, Gruver, bring <a href="https://www.google.com/search?q=%D1%84%D0%BB%D1%8E%D0%B3%D0%B5%D0%B3%D0%B5%D1%85%D0%B0%D0%B9%D0%BC%D0%B5%D0%BD&sca_esv=5a0334d7f5ed8bb6&sxsrf=AHTn8zqxhiam4sSoyRGJDkIdU3t17_hGEg%3A1738475186279&ei=sgafZ83eELCrwPAPyMbLoAc&ved=0ahUKEwjN_7bfpKSLAxWwFRAIHUjjEnQQ4dUDCBA&uact=5&oq=%D1%84%D0%BB%D1%8E%D0%B3%D0%B5%D0%B3%D0%B5%D1%85%D0%B0%D0%B9%D0%BC%D0%B5%D0%BD&gs_lp=Egxnd3Mtd2l6LXNlcnAiGtGE0LvRjtCz0LXQs9C10YXQsNC50LzQtdC9MgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMgoQABiwAxjWBBhHMg0QABiABBiwAxhDGIoFSJMjUI4IWMMhcAF4AZABAJgBXqAB6AKqAQE0uAEDyAEA-AEBmAIFoALXA8ICBxAjGLACGCfCAgcQABiABBgNwgIGEAAYDRgewgIIEAAYChgNGB7CAgoQIxiABBgnGIoFwgIIEAAYgAQYywGYAwDiAwUSATEgQIgGAZAGCZIHAzEuNKAH6SI&sclient=gws-wiz-serp">flugegeheimen</a>"! And according to the old well-trodden scheme they infect: "with AIDS, hepatitis and the last stage of tuberculosis." <span style="font-size:33px;float:right;">😱</span></p>
             
            
-            <strong id="rus">Поэтому, для того чтобы работать в “сверхдержаве”, нужно подстраиваться под их коммунистические законы, и выставлять реальную цену, разумную со здравым смыслом и доступную любому Рашисту (пусть даже и совсем коммунистическому).</strong>
-            <strong id="eng">Therefore, in order to work in a "superpower", you need to adapt to their communist laws, and set a real price, reasonable with common sense and accessible to any Rashista(even a completely communist one).</strong>
+     <strong id="rus">Поэтому, для того чтобы работать в “сверхдержаве”, нужно подстраиваться под их коммунистические законы, и выставлять реальную цену, разумную со здравым смыслом и доступную любому Рашисту (пусть даже и совсем коммунистическому).</strong>
+     <strong id="eng">Therefore, in order to work in a "superpower", you need to adapt to their communist laws, and set a real price, reasonable with common sense and accessible to any Rashista(even a completely communist one).</strong>
+            </div>
+               
+            
+           
+           
+
+          
         <section id="invoicing">
             <h2>invoice for payment from Russian in HTML</h2>
             <div class="flex-boxing">
