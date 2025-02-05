@@ -14,7 +14,6 @@
         document.querySelector('#invoicing > footer:nth-child(9)').style.display="none";
         document.querySelector('#invoicing > footer').style.display="none";
         document.querySelector('#letsGoToPrint').innerHTML='go back';
-        onClickId();
     }else{
         // console.log('print')
         document.querySelector('body > main > article > nav').style.display="";
@@ -48,13 +47,13 @@ function attention(){
     rusStrong.innerHTML="Чтобы распечатать счет, нажмите: \"Ctrl+P\".";
     rusStrong.setAttribute('id','rus');
     document.querySelector('#letsGoToPrint').insertAdjacentElement('afterend',rusStrong);
-    let engStrong=document.createElement('strong');
-    engStrong.innerHTML="To print the invoice, press: \"Ctrl+P\".";
-    engStrong.setAttribute('id','eng');
-    document.querySelector('#letsGoToPrint').insertAdjacentElement('afterend',engStrong);
+    // let engStrong=document.createElement('strong');
+    // engStrong.innerHTML="To print the invoice, press: \"Ctrl+P\".";
+    // engStrong.setAttribute('id','eng');
+    // document.querySelector('#letsGoToPrint').insertAdjacentElement('afterend',engStrong);
     // onClickId();
 }
 function removeAttention(){
     document.querySelector('#invoicing > div strong').remove();
-    document.querySelector('#invoicing > div > strong').remove();
+    // document.querySelector('#invoicing > div > strong').remove();
 }
