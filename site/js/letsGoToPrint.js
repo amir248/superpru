@@ -13,6 +13,7 @@
 
         document.querySelector('#invoicing > footer:nth-child(9)').style.display="none";
         document.querySelector('#invoicing > footer').style.display="none";
+        document.querySelector('#letsGoToPrint').innerHTML='go back';
     }else{
         // console.log('print')
         document.querySelector('body > main > article > nav').style.display="";
@@ -25,6 +26,7 @@
 
         document.querySelector('#invoicing > footer').style.display="";
 
+        document.querySelector('#letsGoToPrint').innerHTML='let\'s go to print';
 
     
     countClick=0;
