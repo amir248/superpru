@@ -115,13 +115,28 @@
 
     
     countClick=0;
+    removeAttention();
     onClickId();
     }
     
 }
 document.querySelector("#letsGoToPrint").addEventListener('click',()=>{
     goToPrint();
+    attention();
 })
 // document.querySelector('main').addEventListener('click',()=>{
 
 // });
+function attention(){
+    let rusStrong=document.createElement('strong');
+    rusStrong.innerHTML="Чтобы распечатать счет, нажмите: \"Ctrl+P\"."
+    document.querySelector('#letsGoToPrint').insertAdjacentElement('afterend',rusStrong);
+    let engStrong=document.createElement('strong');
+    engStrong.innerHTML="To print the invoice, press: \"Ctrl+P\".";
+    document.querySelector('#letsGoToPrint').insertAdjacentElement('afterend',engStrong);
+    onClickId();
+}
+function removeAttention(){
+    document.querySelector('#invoicing > div strong').remove();
+    document.querySelector('#invoicing > div > strong').remove();
+}
