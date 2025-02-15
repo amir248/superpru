@@ -95,7 +95,12 @@ body > main > header > nav > strong > ul > li > a{
 body > main > header > nav > strong > ul > li > a:hover{
     color:var(--main-color);
 }
-
+body > main > header > nav > strong > div > span > a{
+    font-size: 21px;
+    text-decoration: none;
+    text-shadow:1px 1px black;
+    color:white;
+}
 body > main > header > section{
     max-width:1000px;
     width:100%;
