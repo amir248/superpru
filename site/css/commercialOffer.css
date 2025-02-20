@@ -1,0 +1,280 @@
+*{
+    margin:0;
+    padding:0;
+}
+.notPrint > img{
+    width:100%;
+    max-width:900px;
+}
+main > article > fieldset{
+    width:calc(100% - 7px);
+}
+body{
+    width:100%;
+    max-width:1920px;
+    margin-right:auto;
+    margin-left:auto;
+    font-size:20px;
+}
+main{
+    width:100%;
+    max-width:1300px;
+    margin-right:auto;
+    margin-left:auto;
+    display:flex;
+    justify-content: flex-start;
+    align-items: baseline;
+
+}
+aside{
+    position: sticky;
+    top:0;
+}
+main > article{
+    width:100%;
+    max-width:1300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.notPrint > p, main > article > p, main > article > strong{
+    margin:1%;
+}
+article > table{
+    border:3px solid black;
+}
+.notPrint > table > tbody > tr > td:nth-child(2){
+    background-color: rgb(150, 128, 101);
+    color:white;
+    text-shadow:1px 1px black;
+}
+.notPrint > table > tbody > tr > td:nth-child(3){
+    background-color: green;
+    color:white;
+    text-shadow:black 1px 1px;
+}
+.notPrint > table:nth-child(5) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2),.notPrint > table:nth-child(6) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2){
+    background-color: green;
+    font-size:30px;
+}
+.notPrint > table:nth-child(5) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1),.notPrint > table > tbody > tr > td{
+    text-align: center;
+    font-size:30px;
+}
+
+.notPrint > table > tbody > tr > td{
+    border-bottom:1px solid black;
+}
+/* body > main > article > table, tbody, tr, td,body > main > article > table{
+    padding: 0;
+    margin:0;
+} */
+@media(max-width:590px){
+    .notPrint > section > table > tbody > tr{
+        font-size:10px;
+    }
+    .flex-boxing > div > table > tbody > tr{
+        font-size:10px;
+    }
+}
+ @media(max-width:700px){
+    .notPrint > table > tbody > tr > td{
+        font-size:15px;
+    }
+    .notPrint > table{
+        font-size:15px;
+    }
+    .notPrint > table{
+        font-size:15px;
+    }
+    .notPrint > table > tbody > tr{
+        font-size:15px;
+    }
+    #invoice > tbody > tr, td {
+        font-size: 7px;
+    }
+ }
+ .notPrint > section{
+    width:100%;
+}
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+}
+nav > div{
+    height:70px;
+    display:grid;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.openMenu{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:0px;
+    height:100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgb(157, 78, 189);
+    transition: all ease-out 1s;
+    font-size:0;
+    flex-direction: column;
+    opacity:0;
+}
+
+.openMenu > h3 > a{
+    color:rgb(100, 221, 76);
+    text-shadow:black 3px 3px;
+    text-decoration: none;
+}
+.openMenu > h3 > a:hover{
+    color:coral;
+}
+/* @media(min-width:700px){
+    #menu{
+        display:none;
+    }
+}
+@media(max-width:700px){
+
+    body > main > header > nav > strong > ul{
+        display:none;
+    }
+} */
+
+#menu > span{
+    width:70px;
+    height:3px;
+    background-color:var(--main-color);
+    display:block;
+}
+#menu > span:nth-child(2){
+    margin-top:15px;
+    margin-bottom:15px;
+}
+:root {
+    --main-color: rgb(71, 207, 17);
+    --main-color-two: rgba(71, 207, 17, 0.377);
+}
+
+/* body > main:nth-child(1) > article:nth-child(1) > section:nth-child(20) > div:nth-child(2) > img:nth-child(2) */
+#invoice{
+    border: 3px solid black;
+}
+table{
+border-spacing: 0px;
+border-collapse: collapse;
+}
+#invoice > tbody > tr,td{
+    border: 1px solid gray;
+    padding:0;
+    margin:0;
+    border-spacing: 0px;
+}
+
+
+.notPrint > section:nth-child(20) > div:nth-child(2){
+    justify-content: space-around;
+
+}
+.flex-boxing > div{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+    width:100%;
+    max-width: 700px;
+}
+.flex-boxing > div > img{
+    width:100%;
+    max-width:250px;
+}
+.flex-boxing > div > p{
+    width:100%;
+    max-width: 900px;
+}
+.flex-boxing{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.box-inform{
+    display:none;
+}
+.flex-boxing >  .image{
+    width:100%;
+    max-width:250px;
+}
+@media(max-width:1133px){
+    aside{
+        display:none;
+    }
+    .flex-boxing > .image{
+        max-width:1133px;
+    }
+    .box-inform{
+        display:block;
+    }
+   
+}
+footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    background-color:#272727;
+    min-height: 70px;
+    color:white;
+}
+#letsGoToPrint{
+    margin:3%;
+}
+#letsGoToPrint{
+    background: #272727;
+    border:3px solid black;
+    color:yellow;
+    text-shadow:green 1px 1px;
+    font-size:23px;
+    border-radius: 17px;
+    transition: ease 1s;
+}
+#letsGoToPrint:hover{
+    background: yellow;
+    color:#272727;
+    border: 3px solid green;
+}
+@media print {
+    #letsGoToPrint{
+        display:none;
+    }
+    /* body > main > article > section > h2{
+        display:none;
+    } */
+    .notPrint{
+        display:none;
+    }
+    #invoicing > div:nth-child(6){
+        display:none;
+    }
+    .image > img:nth-child(1){
+        max-width:250px;
+    }
+    .flex-boxing > .image{
+        max-width:250px;
+    }
+}
+input[type="checkbox"]{
+    font-size: 33px;
+    width:25px;
+    height:25px;
+    display:inline-block;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+}

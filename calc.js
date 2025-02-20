@@ -5,6 +5,11 @@ document.querySelector('#oneSlideo').addEventListener('click',countPrice);
 document.querySelector('#slidesEng').addEventListener('click',countPrice);
 document.querySelector('#priceEng').addEventListener('click',countPrice);
 document.querySelector('#oneSlideoEng').addEventListener('click',countPrice);
+
+document.querySelector('#menuEng').addEventListener('click',countPrice);
+document.querySelector('#menuR').addEventListener('click',countPrice);
+
+
 addEventListener("keyup", (event) => {
     // console.log(event);
     countPrice();
@@ -84,6 +89,12 @@ function countPrice(){
     }else{
         yandex=0;
     }
+    let menuR;
+    if(document.querySelector('#menuR').checked==true){
+        menuR=10;
+    }else{
+        menuR=0;
+    }
     // --------------- ENG ----------------------------
     let valueEng=document.querySelector('#slidesEng').value;
     let priceEng;
@@ -122,11 +133,17 @@ function countPrice(){
     }else{
         yandexEng=0;
     }
+    let menuEng;
+    if(document.querySelector('#menuEng').checked==true){
+        menuEng=10;
+    }else{
+        menuEng=0;
+    }
     // ___________________ ENG _____________________
 
 
     let summa=value * price;
-    let fullSumma=summa+seo+consultation+semanticCore+google+yandex;
+    let fullSumma=summa+seo+consultation+semanticCore+google+yandex+menuR;
     let oK=document.querySelector('#summa').innerHTML=`${summa}`;
     let oKtwo=document.querySelector('#summaTwo').innerHTML=`${fullSumma}`;
     let totalToPay=document.querySelector('#totalToPay').innerHTML=`${fullSumma}`;
@@ -140,7 +157,7 @@ function countPrice(){
     // let valueEng=document.querySelector('#slidesEng').value;
     // let priceEng=document.querySelector('#priceEng').value;
     let summaEng=valueEng * priceEng;
-    let fullSummaEng=summaEng+seoEng+consultationEng+semanticCoreEng+googleEng+yandexEng;
+    let fullSummaEng=summaEng+seoEng+consultationEng+semanticCoreEng+googleEng+yandexEng+menuEng;
     let oKeng=document.querySelector('#summaEng').innerHTML=`${summaEng}`;
     let oKtwoEng=document.querySelector('#summaTwoEng').innerHTML=`${fullSummaEng}`;
     let totalToPayEng=document.querySelector('#totalToPayEng').innerHTML=`${fullSummaEng}`;

@@ -16,6 +16,9 @@ window.addEventListener('DOMContentLoaded',google);
 document.querySelector('#oneSlideo').addEventListener('click',landingPage);
 document.querySelector('#oneSlideoEng').addEventListener('click',landingPage);
 window.addEventListener('DOMContentLoaded',landingPage);
+document.querySelector('#sevenSlide').addEventListener('click',landingPage);
+document.querySelector('#sevenSlideEng').addEventListener('click',landingPage);
+window.addEventListener('DOMContentLoaded',menuOk);
 
 function landingPage(){
     if(document.querySelector('#oneSlideo').checked==true){
@@ -158,6 +161,27 @@ function google(){
     }else if(document.querySelector('#googleEng').checked==false){
         // console.log('checkbox -False');
         document.querySelector('#sixSlideEng').style.display="none";
+    }else{
+        // console.log('else');
+    }
+    countPrice();
+}
+function menuOk(){
+    if(document.querySelector('#menuR').checked==true){
+        // console.log('chickbox Checked');
+        document.querySelector('#sevenSlide').style.display="";
+    }else if(document.querySelector('#menuR').checked==false){
+        // console.log('checkbox -False');
+        document.querySelector('#sevenSlide').style.display="none";
+    }else{
+        // console.log('else');
+    }
+    if(document.querySelector('#menuEng').checked==true){
+        // console.log('chickbox Checked');
+        document.querySelector('#sevenSlideEng').style.display="";
+    }else if(document.querySelector('#menuEng').checked==false){
+        // console.log('checkbox -False');
+        document.querySelector('#sevenSlideEng').style.display="none";
     }else{
         // console.log('else');
     }
