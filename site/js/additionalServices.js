@@ -16,8 +16,8 @@ window.addEventListener('DOMContentLoaded',google);
 document.querySelector('#oneSlideo').addEventListener('click',landingPage);
 document.querySelector('#oneSlideoEng').addEventListener('click',landingPage);
 window.addEventListener('DOMContentLoaded',landingPage);
-document.querySelector('#sevenSlide').addEventListener('click',landingPage);
-document.querySelector('#sevenSlideEng').addEventListener('click',landingPage);
+document.querySelector('#sevenSlide').addEventListener('click',menuOk);
+document.querySelector('#sevenSlideEng').addEventListener('click',menuOk);
 window.addEventListener('DOMContentLoaded',menuOk);
 
 function landingPage(){
