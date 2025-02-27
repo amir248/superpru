@@ -9,9 +9,10 @@
         document.querySelector('.notPrint').style.display="none";
         document.querySelector('#invoicing > h2').style.display="none";
         document.querySelector('#invoicing > strong:nth-child(7)').style.display="none";
-        document.querySelector('#invoicing > section:nth-child(8)').style.display="none";
-
-        document.querySelector('#invoicing > footer:nth-child(9)').style.display="none";
+        document.querySelector('#invoicing > section:nth-child(9)').style.display="none";
+        document.querySelector('#invoicing > footer').style.display="none";
+        document.querySelector('#barter').style.display="none";
+        
         document.querySelector('#invoicing > footer').style.display="none";
         document.querySelector('#letsGoToPrint').innerHTML='go back';
     }else{
@@ -22,7 +23,9 @@
         document.querySelector('.notPrint').style.display="";
         document.querySelector('#invoicing > h2').style.display="";
         document.querySelector('#invoicing > strong:nth-child(7)').style.display="";
-        document.querySelector('#invoicing > section:nth-child(8)').style.display="";
+        document.querySelector('#invoicing > section:nth-child(9)').style.display="";
+
+        document.querySelector('#barter').style.display="";
 
         document.querySelector('#invoicing > footer').style.display="";
 
