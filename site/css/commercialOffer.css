@@ -6,6 +6,14 @@
     width:100%;
     max-width:900px;
 }
+.notPrint > picture > img:nth-child(1){
+    float:right;
+}
+@media(max-width:700px){
+    .notPrint > picture > img:nth-child(1){
+        min-width:100%;
+    }
+}
 main > article > fieldset{
     width:calc(100% - 7px);
 }
