@@ -35,6 +35,7 @@ document.querySelector('#leftSpan').addEventListener('click',()=>{
     setTimeout(()=>{
         document.querySelector('header').style.cssText=`
         opacity:1;
+        background-position:center center;
         background:url(${boxWithPhoto.photos[boxWithPhoto.count]});
     `;
     },300);
