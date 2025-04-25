@@ -16,21 +16,26 @@ document.querySelector('#leftSpan').addEventListener('click',()=>{
     console.log('click Left ' + boxWithPhoto.count);
     if(boxWithPhoto.count<0){
         boxWithPhoto.count=boxWithPhoto.photos.length;
+        console.log(boxWithPhoto.photos.length);
     }else if(boxWithPhoto.count==0){
-        boxWithPhoto.count=boxWithPhoto.photos.length;
+        boxWithPhoto.count=boxWithPhoto.photos.length-1;
+        console.log(boxWithPhoto.photos.length);
+        console.log('oooooKI');
         setTimeout(()=>{
             document.querySelector('header').style.cssText=`
             opacity:1;
             background-position: center center;
+       
             background:url(${boxWithPhoto.photos[boxWithPhoto.count]});
         `;
-        },1);
+        },300);
     }else{
         boxWithPhoto.count--;
     }
     document.querySelector("header").style.cssText=`
         transition:all ease 1s; 
         opacity:0;
+        background-position: center center;
     `;
     setTimeout(()=>{
         document.querySelector('header').style.cssText=`
@@ -44,6 +49,11 @@ document.querySelector('#rightSpan').addEventListener('click',()=>{
     oNcamera();
     console.log('click Right ' + boxWithPhoto.count);
     if(boxWithPhoto.count>=boxWithPhoto.photos.length){
+        document.querySelector('header').style.cssText=`
+        opacity:1;
+        background-position: center center;
+        background:url(${boxWithPhoto.photos[boxWithPhoto.count]});
+    `;
         boxWithPhoto.count=0;
     }else{
         boxWithPhoto.count++;
@@ -51,12 +61,12 @@ document.querySelector('#rightSpan').addEventListener('click',()=>{
     document.querySelector("header").style.cssText=`
         transition:all ease 1s; 
         opacity:0;
+        background-position: center center;
     `;
     setTimeout(()=>{
         document.querySelector('header').style.cssText=`
         opacity:1;
         background-position: center center;
-        // background:url("site/img/1726572642360.jpg");
         background:url(${boxWithPhoto.photos[boxWithPhoto.count]});
     `;
     },300);

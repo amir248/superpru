@@ -85,6 +85,7 @@ function firstImg(){
             
             if(window.location.pathname=="/"){
                 document.querySelector("header").style.cssText=`
+                background-position: center center;
                 background:url("site/img/Header Background.jpg");
             `;
             }else{
