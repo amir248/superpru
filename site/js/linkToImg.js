@@ -42,7 +42,7 @@ document.querySelector('#leftSpan').addEventListener('click',()=>{
 document.querySelector('#rightSpan').addEventListener('click',()=>{
     oNcamera();
     boxWithPhoto.count++;
-    console.log(boxWithPhoto.count);
+    // console.log(boxWithPhoto.count);
     toGoNextPhoto();
     if(boxWithPhoto.count>=boxWithPhoto.photos.length){
         boxWithPhoto.count=0;
