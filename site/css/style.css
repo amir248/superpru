@@ -12,6 +12,18 @@
     /* font-family: Rajdhani-light;
     src: url(../Rajdhani/Rajdhani-Light.ttf); */
 }
+#photS{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 37%;
+    z-index: -1;
+    font-size:157px;
+    opacity:0;
+    transition: all ease 1s;
+}
 body{
     width:100%;
     max-width:1920px;
@@ -37,7 +49,7 @@ header{
     flex-direction: column;
     flex-wrap: wrap;
     /* background: url('/best-it-solution-agency/site/img/Header Background.jpg'); */
-    background: url('/site/img/Header Background.jpg');
+    /* background: url('/site/img/Header Background.jpg'); */
     min-height:100vh;
     color:white;
     background-size: cover;

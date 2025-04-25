@@ -62,12 +62,46 @@ function languages(){
         }
         resolve(rightPath());
     });
-}
+};//Llanguages
+function linkToImg(){
+    return new Promise((resolve)=>{
+        if(window.location.pathname=="/"){
+            let pathLink="../site/js/linkToImg.js";
+            function toGoLink(){
+                let linkYes=document.createElement('script');
+                linkYes.src=`${pathLink}`;
+                document.querySelector('body').append(linkYes);
+            }
+            resolve(toGoLink());
+        }else{
+            console.log("FF");
+        }
+    })
+};//linkToImg();
+function firstImg(){
+    return new Promise((resolve)=>{
+        if(window.location.pathname=="/"){
+            function ifAllOk(){
+                // console.log('888888888888888888888')
+                document.querySelector("header").style.cssText=`
+                    background:url("site/img/Header Background.jpg");
+                `;
+            }
+        }else{
+            console.log('=_+');
+        }
+        resolve(ifAllOk());
+    })
+    
+};
+firstImg();
 async function main(){
+    await firstImg();
     if(window.location.pathname=="/commercialOffer")await languages();
     await ifNeedCorrectPath();
     await openMenu();
     await date();
     if(window.location.pathname=="/")await writeToMe();
+    await linkToImg();
 }
 window.addEventListener('DOMContentLoaded',main);
