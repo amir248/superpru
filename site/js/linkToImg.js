@@ -47,7 +47,7 @@ document.querySelector('#leftSpan').addEventListener('click',()=>{
 });
 document.querySelector('#rightSpan').addEventListener('click',()=>{
     oNcamera();
-    console.log('click Right ' + boxWithPhoto.count);
+    // console.log('click Right ' + boxWithPhoto.count);
     if(boxWithPhoto.count>=boxWithPhoto.photos.length){
         document.querySelector('header').style.cssText=`
         opacity:1;
