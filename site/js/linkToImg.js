@@ -11,6 +11,20 @@ function oNcamera(){
         document.querySelector("#photS").style.opacity="0";
     },300);
 };//oNcamera();
+function toGoNextPhoto(){
+    document.querySelector("header").style.cssText=`
+    transition:all ease 1s; 
+    opacity:0;
+    background-position: center center;
+    `;
+    setTimeout(()=>{
+        document.querySelector('header').style.cssText=`
+        opacity:1;
+        background:url(${boxWithPhoto.photos[boxWithPhoto.count]});
+        background-position: center center;
+    `;
+    },300);
+   }//toGoNextPhoto();
 document.querySelector('#leftSpan').addEventListener('click',()=>{
     oNcamera();
     // console.log('click Left ' + boxWithPhoto.count);
@@ -19,55 +33,19 @@ document.querySelector('#leftSpan').addEventListener('click',()=>{
         // console.log(boxWithPhoto.photos.length);
     }else if(boxWithPhoto.count==0){
         boxWithPhoto.count=boxWithPhoto.photos.length-1;
-        // console.log(boxWithPhoto.photos.length);
-        // console.log('oooooKI');
-        setTimeout(()=>{
-            document.querySelector('header').style.cssText=`
-            opacity:1;
-       
-            background:url(${boxWithPhoto.photos[boxWithPhoto.count]});
-            background-position: center center;
-        `;
-        },300);
+        toGoNextPhoto();
     }else{
         boxWithPhoto.count--;
     }
-    document.querySelector("header").style.cssText=`
-        transition:all ease 1s; 
-        opacity:0;
-        background-position: center center;
-    `;
-    setTimeout(()=>{
-        document.querySelector('header').style.cssText=`
-        opacity:1;
-        background-position: center center;
-        background:url(${boxWithPhoto.photos[boxWithPhoto.count]});
-    `;
-    },300);
+    toGoNextPhoto();
 });
 document.querySelector('#rightSpan').addEventListener('click',()=>{
     oNcamera();
-    // console.log('click Right ' + boxWithPhoto.count);
+    boxWithPhoto.count++;
+    console.log(boxWithPhoto.count);
+    toGoNextPhoto();
     if(boxWithPhoto.count>=boxWithPhoto.photos.length){
-        document.querySelector('header').style.cssText=`
-        opacity:1;
-        background:url(${boxWithPhoto.photos[boxWithPhoto.count]});
-        background-position: center center;
-    `;
         boxWithPhoto.count=0;
-    }else{
-        boxWithPhoto.count++;
+        toGoNextPhoto();
     }
-    document.querySelector("header").style.cssText=`
-        transition:all ease 1s; 
-        opacity:0;
-        background-position: center center;
-    `;
-    setTimeout(()=>{
-        document.querySelector('header').style.cssText=`
-        opacity:1;
-        background:url(${boxWithPhoto.photos[boxWithPhoto.count]});
-        background-position: center center;
-    `;
-    },300);
 });
