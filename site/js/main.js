@@ -80,16 +80,18 @@ function linkToImg(){
 };//linkToImg();
 function firstImg(){
     return new Promise((resolve)=>{
-        if(window.location.pathname=="/"){
-            function ifAllOk(){
-                // console.log('888888888888888888888')
+        function ifAllOk(){
+            // console.log('888888888888888888888')
+            
+            if(window.location.pathname=="/"){
                 document.querySelector("header").style.cssText=`
-                    background:url("site/img/Header Background.jpg");
-                `;
+                background:url("site/img/Header Background.jpg");
+            `;
+            }else{
+                console.log('=_+');
             }
-        }else{
-            console.log('=_+');
         }
+       
         resolve(ifAllOk());
     })
     
