@@ -21,7 +21,7 @@ document.querySelector('#leftSpan').addEventListener('click',()=>{
         setTimeout(()=>{
             document.querySelector('header').style.cssText=`
             opacity:1;
-            background-position:center center;
+            background-position: center center;
             background:url(${boxWithPhoto.photos[boxWithPhoto.count]});
         `;
         },1);
@@ -35,7 +35,7 @@ document.querySelector('#leftSpan').addEventListener('click',()=>{
     setTimeout(()=>{
         document.querySelector('header').style.cssText=`
         opacity:1;
-        background-position:center center;
+        background-position: center center;
         background:url(${boxWithPhoto.photos[boxWithPhoto.count]});
     `;
     },300);
@@ -55,10 +55,9 @@ document.querySelector('#rightSpan').addEventListener('click',()=>{
     setTimeout(()=>{
         document.querySelector('header').style.cssText=`
         opacity:1;
-        background-position:center center;
+        background-position: center center;
         // background:url("site/img/1726572642360.jpg");
         background:url(${boxWithPhoto.photos[boxWithPhoto.count]});
     `;
     },300);
-    
 });
