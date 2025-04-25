@@ -22,6 +22,8 @@ function toGoNextPhoto(){
         opacity:1;
         background:url(${boxWithPhoto.photos[boxWithPhoto.count]});
         background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
     `;
     },300);
    }//toGoNextPhoto();
