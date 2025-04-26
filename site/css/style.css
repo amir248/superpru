@@ -122,7 +122,12 @@ body > main > header > section{
     align-items: flex-start;
 }
 .center > h1 > span{
+    color:white;
+    text-shadow:black 1px 1px;
+}
+.center > h1 > span:nth-child(2){
     color:var(--main-color);
+    text-shadow:black 1px 1px;
 }
 .center > h1{
     font-family:Rajdhani-Bold;
