@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order a professional landing page</title>
+    <meta name="description" content="order a professinal landing page">
+    <link rel="shortcut icon" href="../site//img/node.png" type="image/x-icon">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            color:white;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--green-color);
+
+        }
+        :root{
+            --max-width:100px;
+            --middle-width:1440px;
+            --green-color:#4c5e24;
+            --black-color:#131311;
+            --black-light:#252c24;
+        }
+        main{
+            background:var(--black-color);
+            width:100%;
+            max-width:var(--middle-width);
+            margin-left:auto;
+            margin-right:auto;
+        }
+        header{
+            width:100%;
+            height:100vh;
+            display:grid;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            align-content:space-between;
+            background: url(site/img/lotos.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+        header > nav{
+            background-color: var(--green-color);
+            width:100%;
+            border-radius: 0 0 7px 7px;
+            display:grid;
+            justify-content: center;
+            align-items: center;
+
+            /* text-align: center; */
+            min-height:30px;
+        }
+        header > h1{
+            font-size:30px;
+            text-shadow:1px 1px black;
+        }
+        header > a > img{
+            width:70px;
+        }
+        article > p{
+            margin:3%;
+        }
+        .ok{
+            position:relative;
+            list-style: none;
+            height:300px;
+            /* background: url(site/img/lp.png); */
+            background-color: var(--black-light);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .ok > li{
+            width:270px;
+            text-align: center;
+            position: absolute;
+        }
+        .ok > li:nth-child(1){
+            left:570px;
+            top:23px;
+        }
+        .ok > li:nth-child(2){
+            left: 150px;
+            top:70px;
+        }
+        .ok > li:nth-child(3){
+            left: 950px;
+            top:130px;
+        }
+        .ok > li:nth-child(4){
+            left: 250px;
+            top:230px;
+        }
+        .ok > li:nth-child(5){
+            left: 750px;
+            top:230px;
+        }
+        .ok > li:nth-child(6){
+            left:550px;
+            top: 110px;
+            font-size:90px;
+        }
+        .secondClass{
+            margin:3%;
+        }
+        .threeClass{
+            margin:3%;
+        }
+        .secondClass > li{
+            list-style: none;
+        }
+        .secondClass > li:before{
+            content: "✅ ";
+        }
+        .threeClass > li{
+            list-style:none;
+        }
+        .threeClass > li:before{
+            content: "⭐️ ";
+        }
+        .gridBlock{
+            display:grid;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        }
+        @media(max-width:1230px){
+            .ok > li:nth-child(1){
+                left:370px;
+            }
+            .ok > li:nth-child(3){
+                left:700px;
+            }
+            .ok > li:nth-child(5){
+                left:550px;
+            }
+            .ok > li:nth-child(2){
+                left:50px;
+            }
+            .ok > li:nth-child(4){
+                left:150px;
+            }
+            .ok > li:nth-child(6){
+                left:350px;
+            }
+        }
+        @media(max-width:980px){
+            .ok > li:nth-child(1){
+                left:270px;
+            }
+            .ok > li:nth-child(3){
+                left:590px;
+            }
+            .ok > li:nth-child(5){
+                left:450px;
+            }
+            .ok > li:nth-child(2){
+                left:10px;
+            }
+            .ok > li:nth-child(4){
+                left:70px;
+            }
+            .ok > li:nth-child(6){
+                left:250px;
+            }
+        }
+        
+        @media(max-width:880px){
+            .ok > li:nth-child(1){
+                left:170px;
+            }
+            .ok > li:nth-child(3){
+                left:390px;
+            }
+            .ok > li:nth-child(5){
+                left:350px;
+            }
+            .ok > li:nth-child(2){
+                left:00px;
+            }
+            .ok > li:nth-child(4){
+                left:50px;
+            }
+            .ok > li:nth-child(6){
+                left:150px;
+            }
+        }
+        @media(max-width:700px){
+            .ok > li{
+                width:170px;
+            }
+            .ok > li:nth-child(1){
+                left:170px;
+            }
+            .ok > li:nth-child(3){
+                left:290px;
+            }
+            .ok > li:nth-child(5){
+                left:250px;
+            }
+            .ok > li:nth-child(2){
+                left:0px;
+            }
+            .ok > li:nth-child(4){
+                left:30px;
+            }
+            .ok > li:nth-child(6){
+                left:150px;
+            }
+        }
+        @media(max-width:500px){
+            .gridBlock{
+                grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+            }
+            .ok > li{
+                position: unset;
+                width:100%;
+                max-width:400px;
+            }
+
+        }
+        .fourClass{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .fourClass > h2{
+            width:100%;
+            max-width:100%;
+            min-width:100%;
+        }
+        .fourClass > li{
+            width:250px;
+            margin:1%;
+            min-height:300px;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(0.25turn, var(--black-color),var(--black-light),var(--black-color));
+        }
+        .fourClass > li > span{
+            font-size:70px;
+            color:#d9ba19;
+            text-shadow:black 1px 1px;
+            background-color: #4c5e24;
+            border-radius: 17px;
+        }
+        .fourClass > li > p{
+            width:210px;
+            max-width:100%;
+        }
+        .fourClass > li > button{
+            width:170px;
+            background:var(--green-color);
+            height:40px;
+            color:white;
+            border-radius:17px;
+            font-size:27px;
+            transition: all ease 1s;
+        }
+        .fourClass > li > button:hover{
+            background-color: #678031;
+            color:#d9ba19;
+            transition: all ease 1s;
+            border-color: #d9ba19;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <nav> one two three </nav>
+            <h1>Заказать профессиональный лендинг пейдж</h1>
+            <a href="https://wa.me/+79528885656"><img src="site/img/WhatsApp_icon.png" alt="WhatsApp"></a>
+        </header>
+        <article>
+            <p>Лендинг пейдж (одностраничный сайт) – это эффективный инструмент для продвижения товаров и услуг в интернете. Он позволяет сфокусировать внимание на одном предложении, минимизируя отвлекающие элементы и повышая конверсию.</p>
+            <h2>Основные преимущества лендинга:
+            </h2>
+            <ul class="ok">
+                <li>Высокая конверсия благодаря четкой структуре и фокусу на одном действии</li>
+                <li>Минимальные затраты на разработку и продвижение</li>
+                <li>Быстрая адаптация под рекламные кампании</li>
+                <li>Простота управления контентом</li>
+                <li>Доступная цена по сравнению с многостраничными сайтами</li>
+                <li>💸</li>
+            </ul>
+           <div class="gridBlock">
+            <ul class="secondClass">
+                <h2>Для каких целей подходит лендинг</h2>
+                <li>Презентация нового товара или услуги</li>
+                <li>Проведение маркетинговых кампаний</li>
+                <li>Запуск стартапа и тестирование бизнес-идеи</li>
+                <li>Сбор контактных данных клиентов</li>
+                <li>Повышение конверсии рекламных кампаний</li>
+            </ul>
+            <ul class="threeClass">
+                <h2>Структура эффективного лендинга</h2>
+                <li>Привлекательный заголовок и подзаголовок</li>
+                <li>Продающее описание предложения</li>
+                <li>Визуальный контент (изображения, видео)</li>
+                <li>Блок с преимуществами</li>
+                <li>Раздел с отзывами клиентов</li>
+                <li>Четкий призыв к действию</li>
+                <li>Форма обратной связи</li>
+            </ul>
+           </div>
+            <ol class="fourClass">
+                <h2>Этапы разработки лендинга</h2>
+                <li>
+                    <span>1</span>
+                    <P>Анализ и стратегия – изучение целевой аудитории, анализ конкурентов</P>
+                    <button>подробней</button>
+                </li>
+                <li>
+                    <span>2</span>
+                    <p>Прототипирование – создание схемы расположения элементов</p>
+                    <button>подробней</button>
+                </li>
+                <li>
+                    <span>3</span>
+                    <p>Дизайн и верстка – разработка уникального дизайна, адаптация под мобильные устройства</p>
+                    <button>подробней</button>
+                </li>
+                <li>
+                    <span>4</span>
+                    <p>Контент – написание продающих текстов</p>
+                    <button>подробней</button>
+                </li>
+                <!-- <li>Интеграция – подключение к CRM, настройка аналитики</li> -->
+                <li>
+                    <span>5</span>
+                    <p>Тестирование – проверка всех элементов перед запуском</p>
+                    <button>подробней</button>
+                </li>
+            </ol>
+    
+            <h2>Лендинг для продажи товаров через карго из Китая</h2>
+            <ul>
+                <strong>Карго из Китая требует особого подхода к оформлению:</strong>
+                <li>Подробное описание условий доставки</li>
+                <li>Сроки и стоимость перевозки</li>
+                <!-- <li>Преимущества работы с вами</li> -->
+                <li>Примеры успешно доставленных грузов</li>
+                <li>Гарантии и безопасность</li>
+                <li>Контактная информация для связи</li>
+            </ul>
+            <ul>
+                <h3>Почему стоит заказать лендинг у профессионалов</h3>
+                <li>Комплексный подход к разработке</li>
+                <li>Адаптивный дизайн для всех устройств</li>
+                <li>Оптимизация под поисковые системы</li>
+                <li>Интеграция с популярными сервисами</li>
+                <li>Гарантия качества и поддержки</li>
+            </ul>
+            <p>Закажите профессиональный лендинг пейдж прямо сейчас и увеличьте продажи вашего бизнеса!</p>
+            <p>Для получения консультации и расчета <a href="https://madness.qucu.ru/commercialOffer">стоимости</a> оставьте заявку через <a href="https://wa.clck.bar/79528885656">whatsApp</a></p>
+        </article>
+    </main>
+</body>
+</html>
