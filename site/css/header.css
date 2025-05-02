@@ -43,17 +43,28 @@ header > nav > strong > button:hover{
     color:var(--main-color);
     /* background-color: coral; */
 }
-body > main > header > nav > strong > ul > li > a{
+ header > nav > strong > ul > li > a{
     text-decoration: none;
     color:white;
     margin-right:15px;
 }
-body > main > header > nav > strong > ul > li > a:hover{
+ header > nav > strong > ul > li > a:hover{
     color:var(--main-color);
 }
-body > main > header > nav > strong > div > span > a{
+ header > nav > strong > div > span > a{
     font-size: 21px;
     text-decoration: none;
     text-shadow:1px 1px black;
     color:white;
+}
+
+body > main > footer > div > div > ul > li > a{
+    color:white;
+    text-shadow:black 1px 1px;
+    text-decoration: none;
+    transition:all ease 1s;
+}
+body > main > footer > div > div > ul > li > a:hover{
+    color:var(--green-color);
+    transition: all ease 1s;
 }
