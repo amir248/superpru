@@ -183,6 +183,7 @@ progress{
 .aboutUsSection > div > div > h2 > span{
     color:var(--main-color);
 }
+
 .boxSquare{
     display:block;
     width:100px;
@@ -426,4 +427,79 @@ body > main > img {
 body > main > picture > img {
     width: 100%;
     max-width: 1300px;
+}
+@media(max-width:700px){
+    .boxSquare{
+        left:370px;
+    }
+    .center > h1{
+        font-size: 70px;
+    }
+    .beforeFooter > div > form > button{
+     
+        margin-left:70px;
+    }
+    .beforeFooter > div > form > button:before{
+        /* width:100%; */
+        max-width:200px;
+    }
+    
+}
+@media(max-width:550px){
+    .boxParallelepiped{
+        top:-450px;
+    }
+    .boxSquare{
+        left:330px;
+    }
+    .boxLine{
+        top:227px;
+    }
+    .aboutUsSection > div:nth-child(1) > section:nth-child(1){
+        height: 477px;
+    }
+}@media(max-width:500px){
+    
+    .boxSquare{
+        left:270px;
+    }
+    .boxLine{
+        top:187px;
+    }
+    .aboutUsSection > div:nth-child(1) > section:nth-child(1){
+        height: 400px;
+    }
+}
+@media(max-width:425px){
+    
+    .boxSquare{
+        left:220px;
+    }
+    .aboutUsSection > div:nth-child(1) > section:nth-child(1){
+        height: 370px;
+    }
+}
+@media(max-width:400px){
+    .boxParallelepiped{
+        top:-350px;
+    }
+    .boxSquare{
+        left:170px;
+    }
+    .boxLine{
+        top:87px
+    }
+    .aboutUsSection > div:nth-child(1) > section:nth-child(1){
+        height: 300px;
+    }
+}
+@media(max-width:300){
+    .boxSquare{
+        left:170px;
+    }
+}
+@media(max-width:280){
+    .boxSquare{
+        left:100px;
+    }
 }
