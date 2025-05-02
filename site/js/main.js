@@ -16,7 +16,7 @@ function openMenu(){
         }
         setTimeout(()=>{
             resolve(oM());
-        },777);
+        },1777);
     });
 }
 function date(){
@@ -35,13 +35,23 @@ function writeToMe(){
     return new Promise((resolve)=>{
         let linkPath='site/js/toLinkMyContact.js';
         function write(){
-            let link=document.createElement('script');
-            link.src=`${linkPath}`;
-            document.querySelector('body').append(link);
+            if(window.location.pathname=="/"){
+                let link=document.createElement('script');
+                link.src=`${linkPath}`;
+                document.querySelector('body').append(link);
+            }else if(window.location.pathname=="/order-professional-landing-page"||window.location.pathname=="/order-professional-landing-page.html"){
+                document.querySelector('#writeToMe').addEventListener('click',toGoClick);
+                function toGoClick(){
+                    window.location.href="https://wa.clck.bar/79528885656?text=Hi!%20I'm%20need%20landing%20page."
+                };
+            }else{
+                console.log('link esfae');
+            }
+            
         }
         setTimeout(()=>{
             resolve(write());
-        },700);
+        },777);
     })
 }
 function ifNeedCorrectPath(){
@@ -140,7 +150,7 @@ async function main(){
     await ifNeedCorrectPath();
     await openMenu();
     await date();
-    if(window.location.pathname=="/"||window.location.pathname=="/order-professional-landing-page")await writeToMe();
+    await writeToMe();
     await linkToImg();
 }
 window.addEventListener('DOMContentLoaded',main);
