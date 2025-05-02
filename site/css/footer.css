@@ -10,7 +10,7 @@ footer{
     min-height:450px;
     max-width:1920px;
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items:center;
     background: url("../img/bg-bodyFooter.jpg");
     flex-direction: column;
