@@ -14,7 +14,9 @@ function openMenu(){
             openM.src=`${menuPath}`;
             document.querySelector('body').append(openM);
         }
-        resolve(oM());
+        setTimeout(()=>{
+            resolve(oM());
+        },777);
     });
 }
 function date(){
