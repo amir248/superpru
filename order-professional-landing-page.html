@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order a professional landing page</title>
     <meta name="description" content="order a professinal landing page">
-    <link rel="shortcut icon" href="../site//img/node.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../site/img/floar-lotos.png" type="image/x-icon">
+    <link rel="stylesheet" href="site/css/variable.css">
+    <link rel="stylesheet" href="site/css/header.css">
+    <link rel="stylesheet" href="site/css/menu.css">
+    <link rel="stylesheet" href="site/css/footer.css">
     <style>
         *{
             margin:0;
@@ -270,12 +274,32 @@
             transition: all ease 1s;
             border-color: #d9ba19;
         }
+       
+        .sixClass > li{
+            list-style:none;
+        }
+        .sixClass > li:before{
+            content: "🐸 ";
+        }
+        .fiveClass > li{
+            list-style:none;
+        }
+        .fiveClass > li:before{
+            content:"🎯 ";
+        }
+        .sixClass, .fiveClass{
+            margin:3%;
+        }
     </style>
 </head>
 <body>
     <main>
         <header>
-            <nav> one two three </nav>
+          
+            <nav w3-include-html="site/includeHTML/nav.html">
+                
+                
+            </nav>
             <h1>Заказать профессиональный лендинг пейдж</h1>
             <a href="https://wa.me/+79528885656"><img src="site/img/WhatsApp_icon.png" alt="WhatsApp"></a>
         </header>
@@ -342,7 +366,8 @@
             </ol>
     
             <h2>Лендинг для продажи товаров через карго из Китая</h2>
-            <ul>
+            <div class="gridBlock">
+            <ul class="sixClass">
                 <strong>Карго из Китая требует особого подхода к оформлению:</strong>
                 <li>Подробное описание условий доставки</li>
                 <li>Сроки и стоимость перевозки</li>
@@ -351,7 +376,7 @@
                 <li>Гарантии и безопасность</li>
                 <li>Контактная информация для связи</li>
             </ul>
-            <ul>
+            <ul class="fiveClass">
                 <h3>Почему стоит заказать лендинг у профессионалов</h3>
                 <li>Комплексный подход к разработке</li>
                 <li>Адаптивный дизайн для всех устройств</li>
@@ -359,9 +384,27 @@
                 <li>Интеграция с популярными сервисами</li>
                 <li>Гарантия качества и поддержки</li>
             </ul>
+           </div>
             <p>Закажите профессиональный лендинг пейдж прямо сейчас и увеличьте продажи вашего бизнеса!</p>
             <p>Для получения консультации и расчета <a href="https://madness.qucu.ru/commercialOffer">стоимости</a> оставьте заявку через <a href="https://wa.clck.bar/79528885656">whatsApp</a></p>
         </article>
+        <footer w3-include-html="site/includeHTML/footer.html">
+
+        </footer>
     </main>
+    <script defer src="site/js/main.js"></script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/67f4e42a99aa8a191374aace/1ioa9mhl3';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>

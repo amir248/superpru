@@ -1,0 +1,14 @@
+*{
+    margin:0;
+    padding:0;
+}
+:root {
+    --main-color: rgb(71, 207, 17);
+    --main-color-two: rgba(71, 207, 17, 0.377);
+  }
+@font-face {
+    font-family: Rajdhani-Bold;
+    src: url(../Rajdhani/Rajdhani-Bold.ttf);
+    /* font-family: Rajdhani-light;
+    src: url(../Rajdhani/Rajdhani-Light.ttf); */
+}
