@@ -139,7 +139,7 @@ async function main(){
     await ifNeedCorrectPath();
     await openMenu();
     await date();
-    if(window.location.pathname=="/")await writeToMe();
+    if(window.location.pathname=="/"||window.location.pathname=="/order-professional-landing-page")await writeToMe();
     await linkToImg();
 }
 window.addEventListener('DOMContentLoaded',main);
