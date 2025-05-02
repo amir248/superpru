@@ -54,25 +54,25 @@ footer > div > div:nth-child(1) > strong > span:nth-child(2){
     color:white;
     font-size:37px;
 }
-body > main > article > footer > div > div > ul > li{
+footer > div > div > ul > li{
     list-style-type: none;
 }
-body > main > article > footer > div > div{
+footer > div > div{
     display:flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
 }
-body > main > article > footer > div > div > li{
+footer > div > div > li{
     display:flex;
     justify-content:flex-start;
     align-items: center;
     /* flex-direction: column; */
 }
-body > main > article > footer > div > div > li > img{
+footer > div > div > li > img{
     margin-right:17px;
 }
-body > main > article > footer > div > div > li{
+footer > div > div > li{
     list-style-type:none;
 }
 @media(max-width:700px){
@@ -162,4 +162,28 @@ footer > section{
 footer > section > strong{
     margin-left: 30px;
     margin-right:30px;
+}
+body > main > footer > div > div > p{
+    text-shadow:1px 1px black;
+}
+body > main > footer > div > div > li > a{
+    text-shadow:1px 1px black;
+    color:white;
+    text-decoration: none;
+}
+body > main > article > footer > div > div > ul > li > a{
+    color:white;
+    text-decoration:none;
+    text-shadow:1px 1px black;
+}
+body > main > article > footer > div > div > ul > li > a:hover{
+    color:var(--green-color);
+}
+body > main > article > footer > div > div > p{
+    text-shadow:1px 1px black;
+}
+footer > div > div > strong > span:nth-child(2) > a{
+    color:white;
+    text-decoration: none;
+    text-shadow:1px 1px black;
 }
