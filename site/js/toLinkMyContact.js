@@ -2,7 +2,7 @@ const writeToMeNow = document.querySelector('#writeToMe');
 const writeToMeTwo = document.querySelector('#writeToMeTwo');
 const writeToMeThree = document.querySelector('#writeToMeThree');
 const writeToMeFour = document.querySelector('#writeToMeFour');
-
+document.querySelector('#writeToMe').addEventListener('click',toGoOrder);
 writeToMeFour.addEventListener('click',toGoOrder);
 writeToMeThree.addEventListener('click',toGoOrder);
 writeToMeNow.addEventListener('click',toGoOrder);

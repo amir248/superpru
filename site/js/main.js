@@ -19,15 +19,14 @@ function openMenu(){
 }
 function date(){
     return new Promise((resolve)=>{
-        var datePath='site/js/data.js';
-       
-        // console.log(datePath+ " " + window.location.pathname);
         function newDate(){
-            let dates=document.createElement('script');
-            dates.src=`${datePath}`;
-            document.querySelector('body').append(dates);
+            const d = new Date();
+            let year=d.getFullYear();
+            document.querySelector('#data').innerHTML=`${year}`;
         }
-        resolve(newDate());
+        setTimeout(()=>{
+            resolve(newDate());
+        },777);
     });
 }
 function writeToMe(){
@@ -38,7 +37,9 @@ function writeToMe(){
             link.src=`${linkPath}`;
             document.querySelector('body').append(link);
         }
-        resolve(write());
+        setTimeout(()=>{
+            resolve(write());
+        },700);
     })
 }
 function ifNeedCorrectPath(){
@@ -82,7 +83,6 @@ function firstImg(){
     return new Promise((resolve)=>{
         function ifAllOk(){
             // console.log('888888888888888888888')
-            
             if(window.location.pathname=="/"){
                 document.querySelector("header").style.cssText=`
                 background-position: center center;
@@ -92,7 +92,6 @@ function firstImg(){
                 // console.log('=_+');
             }
         }
-       
         resolve(ifAllOk());
     })
     
@@ -128,7 +127,7 @@ function includeHTMLoK(){
           }
           setTimeout(()=>{
             resolve(includeHTML());
-          },1700);
+          },0);
     });
 };//includeHTML
 firstImg();
@@ -139,7 +138,7 @@ async function main(){
     await ifNeedCorrectPath();
     await openMenu();
     await date();
-    if(window.location.pathname=="/"||window.location.pathname=="/order-professional-landing-page")await writeToMe();
+    if(window.location.pathname=="/"||window.location.pathname=="/order-professional-landing-page.html")await writeToMe();
     await linkToImg();
 }
 window.addEventListener('DOMContentLoaded',main);
