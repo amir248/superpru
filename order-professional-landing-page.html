@@ -291,6 +291,29 @@
         .sixClass, .fiveClass{
             margin:3%;
         }
+        .frogImg{
+            width:100%;
+            max-width:370px;
+        }
+        .professional{
+            width:100%;
+            max-width:370px;
+            border-radius:17px;
+        }
+        #frog{
+            display:none;
+        }
+        #frogSmall{
+                display:block;
+            }
+        @media(min-width:1000px){
+            #frogSmall{
+                display:none;
+            }
+            #frog{
+                display:block;
+            }
+        }
     </style>
     <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
@@ -381,9 +404,12 @@
                     <button>подробней</button>
                 </li>
             </ol>
-    
+            
             <h2>Лендинг для продажи товаров через карго из Китая</h2>
             <div class="gridBlock">
+                <picture id="frogSmall">
+                    <img class="frogImg" src="site/img/frog.png" alt="order lending page how flower lotos grows up in dirt">
+                </picture>
             <ul class="sixClass">
                 <strong>Карго из Китая требует особого подхода к оформлению:</strong>
                 <li>Подробное описание условий доставки</li>
@@ -393,6 +419,12 @@
                 <li>Гарантии и безопасность</li>
                 <li>Контактная информация для связи</li>
             </ul>
+            <picture id="frog">
+                <img class="frogImg" src="site/img/frog.png" alt="order lending page how flower lotos grows up in dirt">
+            </picture>
+            <picture>
+                <img class="professional" src="site/img/AmirDzhan.jpeg" alt="Order a landing page from a professional">
+            </picture>
             <ul class="fiveClass">
                 <h3>Почему стоит заказать лендинг у профессионалов</h3>
                 <li>Комплексный подход к разработке</li>
