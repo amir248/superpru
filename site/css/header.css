@@ -9,12 +9,23 @@ header > nav > strong > div > span:nth-child(1){
     color: var(--main-color);
 }
 header > nav > strong{
-    display: flex;
+    display: grid;
     justify-content: space-around;
     align-items: center;
     justify-items:center;
     margin-top: 17px;
     width:100%;
+    grid-template-columns: repeat(3, minmax(30px, 200px));
+}
+@media(max-width:750px){
+    #writeToMe{
+        width:100px;
+    }
+}
+@media(max-width:350px){
+    #writeToMe{
+        width:70px;
+    }
 }
 header > nav > strong > div{
     display:grid;
