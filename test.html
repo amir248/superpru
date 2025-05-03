@@ -1,0 +1,161 @@
+<div id="box">
+    <div class="vertical">Welcome to <strong>The Box!</strong></div>
+   </div>
+   <div id="box1">
+    <div class="vertical">Welcome to <strong>The Box!</strong></div>
+   </div>
+   <div id="box2">
+    <div class="vertical">Welcome to <strong>The Box!</strong></div>
+   </div>
+   <div id="box3">
+    <div class="vertical">Welcome to <strong>The Box!</strong></div>
+   </div>
+   <div id="box4">
+    <div class="vertical">Welcome to <strong>The Box!</strong></div>
+   </div>
+   <style>
+   #box {
+    background-color: rgb(40 40 190 / 100%);
+    border: 4px solid rgb(20 20 120);
+    transition: margin 0.1s, opacity 1s;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-left: -350px;
+    margin-right: 0;
+    opacity: 0; /* Начальная прозрачность */
+   }
+   #box1 {
+    background-color: rgb(84, 219, 31);
+    border: 4px solid rgb(43, 120, 20);
+    transition: margin 0.1s, opacity 1s;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-left: -350px;
+    margin-right: 0;
+    opacity: 0; /* Начальная прозрачность */
+   }
+   #box2 {
+    background-color: rgb(219, 153, 31);
+    border: 4px solid 0.11s, opacity 1s;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-left: -350px;
+    margin-right: 0;
+    opacity: 0; /* Начальная прозрачность */
+   }
+   #box3 {
+    background-color: rgb(219, 31, 163);
+    border: 4px solid rgb(112, 20, 120);
+    transition: margin 0.1s, opacity 1s;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-right: -350px;
+    margin-left: 0;
+    opacity: 0; /* Начальная прозрачность */
+   }
+   #box4 {
+    background-color: rgb(31, 219, 194);
+    border: 4px solid rgb(20, 120, 107);
+    transition: margin 0.1s, opacity 1s;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-right: -350px;
+    margin-left: 0;
+    opacity: 0; /* Начальная прозрачность */
+   }
+   .vertical {
+    color: white;
+    font: 32px "Arial";
+   }
+   
+   .extra {
+    width: 350px;
+    height: 350px;
+    margin-top: 10px;
+    border: 4px solid rgb(20 20 120);
+    text-align: center;
+    padding: 20px;
+   }
+   </style>
+   
+   <script>
+   const numSteps = 20.0;
+   
+   let boxElement;
+   let prevRatio = 0.0;
+   let maxMargin = 350;
+   
+   window.addEventListener(
+    "load",
+    (event) => {
+    boxElement = document.querySelector("#box");
+    boxElement1 = document.querySelector("#box1");
+    boxElement2 = document.querySelector("#box2");
+    boxElement3 = document.querySelector("#box3");
+    boxElement4 = document.querySelector("#box4");
+    createObserver();
+    },
+    false
+   );
+   
+   function createObserver() {
+    let observer;
+    let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: buildThresholdList()
+    };
+    observer = new IntersectionObserver(handleIntersect, options);
+    observer.observe(boxElement);
+    observer.observe(boxElement1);
+    observer.observe(boxElement2);
+    observer.observe(boxElement3);
+    observer.observe(boxElement4);
+   }
+   
+   function buildThresholdList() {
+    let thresholds = [];
+    let numSteps = 20;
+    
+    for (let i = 1.0; i <= numSteps; i++) {
+    let ratio = i / numSteps;
+    thresholds.push(ratio);
+    }
+    thresholds.push(0);
+    return thresholds;
+   }
+   
+   function handleIntersect(entries, observer) {
+    entries.forEach((entry) => {
+    let newMargin = (1 - entry.intersectionRatio) * maxMargin;
+    let opacity = entry.intersectionRatio; // Рассчитываем прозрачность
+    
+    entry.target.style.marginRight = `${newMargin}px`;
+    entry.target.style.marginLeft = `-${newMargin}px`;
+    entry.target.style.opacity = opacity; // Устанавливаем прозрачность
+    
+    prevRatio = entry.intersectionRatio;
+    });
+   }
+   </script>
+   

@@ -1,0 +1,109 @@
+<div class="box" data-direction="left">
+    <div class="vertical">Welcome to <strong>The Box!</strong></div>
+</div>
+<div class="box" data-direction="right">
+    <div class="vertical">Welcome to <strong>The Box!</strong></div>
+</div>
+<div class="box" data-direction="left">
+    <div class="vertical">Welcome to <strong>The Box!</strong></div>
+</div>
+<div class="box" data-direction="right">
+    <div class="vertical">Welcome to <strong>The Box!</strong></div>
+</div>
+<div class="box" data-direction="left">
+    <div class="vertical">Welcome to <strong>The Box!</strong></div>
+</div>
+
+<style>
+.box {
+    background-color: rgb(40 40 190 / 100%);
+    border: 4px solid rgb(20 20 120);
+    transition: margin 0.1s, opacity 1s;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-left: -350px;
+    margin-right: 0;
+    opacity: 0;
+}
+
+.box[data-direction="right"] {
+    margin-left: 0;
+    margin-right: -350px;
+}
+
+.box:nth-child(2n) {
+    background-color: rgb(84, 219, 31);
+    border-color: rgb(43, 120, 20);
+}
+
+.box:nth-child(3n) {
+    background-color: rgb(219, 153, 31);
+    border-color: rgb(120, 80, 20);
+}
+
+.box:nth-child(4n) {
+    background-color: rgb(219, 31, 163);
+    border-color: rgb(112, 20, 120);
+}
+
+.box:nth-child(5n) {
+    background-color: rgb(31, 219, 194);
+    border-color: rgb(20, 120, 107);
+}
+
+.vertical {
+    color: white;
+    font: 32px "Arial";
+}
+</style>
+
+<script>
+const numSteps = 20.0;
+let maxMargin = 350;
+
+window.addEventListener('load', (event) => {
+    const boxes = document.querySelectorAll('.box');
+    createObserver(boxes);
+}, false);
+
+function createObserver(elements) {
+    const observer = new IntersectionObserver(handleIntersect, {
+        root: null,
+        rootMargin: '0px',
+        threshold: buildThresholdList()
+    });
+    
+    elements.forEach(element => observer.observe(element));
+}
+
+function buildThresholdList() {
+    const thresholds = [];
+    for (let i = 1.0; i <= numSteps; i++) {
+        thresholds.push(i / numSteps);
+    }
+    thresholds.push(0);
+    return thresholds;
+}
+
+function handleIntersect(entries, observer) {
+    entries.forEach(entry => {
+        const direction = entry.target.dataset.direction;
+        const newMargin = (1 - entry.intersectionRatio) * maxMargin;
+        const opacity = entry.intersectionRatio;
+        
+        if (direction === 'left') {
+            entry.target.style.marginLeft = `-${newMargin}px`;
+            entry.target.style.marginRight = '0';
+        } else {
+            entry.target.style.marginLeft = '0';
+            entry.target.style.marginRight = `${newMargin}px`;
+        }
+        
+        entry.target.style.opacity = opacity;
+    });
+}
+</script>

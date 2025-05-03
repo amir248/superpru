@@ -46,6 +46,7 @@
             background: url(site/img/lotos.jpg);
             background-size: cover;
             background-position: center center;
+            overflow: hidden;
         }
         header > nav{
             background-color: var(--green-color);
@@ -72,8 +73,12 @@
         header > a > img{
             width:70px;
         }
+        article{
+            overflow: hidden;
+        }
         article > p{
             margin:3%;
+            /* overflow: hidden; */
         }
         .ok{
             position:relative;
@@ -328,7 +333,33 @@
                 display:block;
             }
         }
-    </style>
+
+.box {
+    /* background-color: rgb(40 40 190 / 100%);
+    border: 4px solid rgb(20 20 120); */
+    transition: margin 0.1s, opacity 1s;
+   
+    
+    margin-left: -350px;
+    margin-right: 0;
+    opacity: 0;
+    transition: all ease 1s;
+    overflow: hidden;;
+}
+
+.box[data-direction="right"] {
+    margin-left: 0;
+    margin-right: -350px;
+    /* float:right; */
+   
+}
+
+
+.vertical {
+    color: rgb(146, 102, 102);
+    font: 32px "Arial";
+}
+</style>
     <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -354,14 +385,15 @@
                 
                 
             </nav>
-            <h1>Заказать профессиональный лендинг пейдж</h1>
+            <h1 class="box">Заказать профессиональный лендинг пейдж</h1>
             <a href="https://wa.me/+79528885656"><img src="site/img/WhatsApp_icon.png" alt="WhatsApp"></a>
         </header>
         <article>
+            
             <p>Лендинг пейдж (одностраничный сайт) – это эффективный инструмент для продвижения товаров и услуг в интернете. Он позволяет сфокусировать внимание на одном предложении, минимизируя отвлекающие элементы и повышая конверсию.</p>
             <h2>Основные преимущества лендинга:
             </h2>
-            <ul class="ok">
+            <ul class="ok box">
                 <li>Высокая конверсия благодаря четкой структуре и фокусу на одном действии</li>
                 <li>Минимальные затраты на разработку и продвижение</li>
                 <li>Быстрая адаптация под рекламные кампании</li>
@@ -369,7 +401,7 @@
                 <li>Доступная цена по сравнению с многостраничными сайтами</li>
                 <li>💸</li>
             </ul>
-           <div class="gridBlock">
+           <div class="gridBlock box" data-direction="right">
             <ul class="secondClass">
                 <h2>Для каких целей подходит лендинг</h2>
                 <li>Презентация нового товара или услуги</li>
@@ -378,7 +410,7 @@
                 <li>Сбор контактных данных клиентов</li>
                 <li>Повышение конверсии рекламных кампаний</li>
             </ul>
-            <ul class="threeClass">
+            <ul class="threeClass" >
                 <h2>Структура эффективного лендинга</h2>
                 <li>Привлекательный заголовок и подзаголовок</li>
                 <li>Продающее описание предложения</li>
@@ -424,7 +456,7 @@
                 <picture id="frogSmall">
                     <img class="frogImg" src="site/img/frog.png" alt="order lending page how flower lotos grows up in dirt">
                 </picture>
-            <ul class="sixClass">
+            <ul class="sixClass box">
                 <strong>Карго из Китая требует особого подхода к оформлению:</strong>
                 <li>Подробное описание условий доставки</li>
                 <li>Сроки и стоимость перевозки</li>
@@ -437,9 +469,9 @@
                 <img class="frogImg" src="site/img/frog.png" alt="order lending page how flower lotos grows up in dirt">
             </picture>
             <picture>
-                <img class="professional" src="site/img/AmirDzhan.jpeg" alt="Order a landing page from a professional">
+                <img class="professional box" src="site/img/AmirDzhan.jpeg" alt="Order a landing page from a professional">
             </picture>
-            <ul class="fiveClass">
+            <ul class="fiveClass box">
                 <h3>Почему стоит заказать лендинг у профессионалов</h3>
                 <li>Комплексный подход к разработке</li>
                 <li>Адаптивный дизайн для всех устройств</li>
@@ -452,7 +484,52 @@
             <p>Для получения консультации и расчета <a href="https://madness.qucu.ru/commercialOffer">стоимости</a> оставьте заявку через <a href="https://wa.clck.bar/79528885656">whatsApp</a></p>
         </article>
         <footer w3-include-html="site/includeHTML/footer.html">
-
+            <script>
+                const numSteps = 20.0;
+                let maxMargin = 350;
+                
+                window.addEventListener('load', (event) => {
+                    const boxes = document.querySelectorAll('.box');
+                    createObserver(boxes);
+                }, false);
+                
+                function createObserver(elements) {
+                    const observer = new IntersectionObserver(handleIntersect, {
+                        root: null,
+                        rootMargin: '0px',
+                        threshold: buildThresholdList()
+                    });
+                    
+                    elements.forEach(element => observer.observe(element));
+                }
+                
+                function buildThresholdList() {
+                    const thresholds = [];
+                    for (let i = 1.0; i <= numSteps; i++) {
+                        thresholds.push(i / numSteps);
+                    }
+                    thresholds.push(0);
+                    return thresholds;
+                }
+                
+                function handleIntersect(entries, observer) {
+                    entries.forEach(entry => {
+                        const direction = entry.target.dataset.direction;
+                        const newMargin = (1 - entry.intersectionRatio) * maxMargin;
+                        const opacity = entry.intersectionRatio;
+                        
+                        if (direction === 'left') {
+                            entry.target.style.marginLeft = `-${newMargin}px`;
+                            entry.target.style.marginRight = '0';
+                        } else {
+                            entry.target.style.marginLeft = '0';
+                            entry.target.style.marginRight = `${newMargin}px`;
+                        }
+                        
+                        entry.target.style.opacity = opacity;
+                    });
+                }
+                </script>
         </footer>
     </main>
     <script defer src="site/js/main.js"></script>
