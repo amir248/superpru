@@ -24,11 +24,12 @@ article{
     color:white;
     font-size:20px;
     /* display:grid; */
+    padding-bottom:33px;
 }
 article > p,h2,h3, ul,ol{
     margin:3%;
 }
-article > picture > img{
+.firstImg, .secondImg, .threeImg, .fourImg, .fiveImg{
     width:100%;
     max-width:1300px;
 }
@@ -36,11 +37,12 @@ article > ul > li{
     margin-left:37px;
 }
 @media(min-width:700px){
-    article > picture > img{
+    .firstImg, .threeImg, .fiveImg{
         float:right;
         max-width:470px;
     }
-    body > main:nth-child(1) > article:nth-child(2) > picture:nth-child(6) > img:nth-child(1){
+    .secondImg, .fourImg{
+        max-width:470px;
         float:left;
         margin-right:37px;
     }
