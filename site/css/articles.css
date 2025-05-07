@@ -52,3 +52,6 @@ article > ul > li{
     display:grid !important;
     justify-items: center !important;
 }
+#sigCommentsBlock{
+    background-color: rgb(44, 44, 44);;
+}
