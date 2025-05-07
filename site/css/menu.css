@@ -19,7 +19,7 @@ nav > div{
 
 .openMenu{
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width:0px;
     height:100vh;
