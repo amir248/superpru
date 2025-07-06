@@ -27,7 +27,7 @@ article > picture > img{
     max-width:900px;
     border-radius: 7px;
 }
-article > button{
+article > section > button{
     width:170px;
     height:170px;
     border-radius: 50%;
@@ -37,7 +37,16 @@ article > button{
     text-shadow:black 2px 2px;
     transition:all ease 1s;
 }
-article > button:hover{
+article > section > button:hover{
     color:yellow;
     background-color: rgb(29, 29, 29);
+}
+
+body > main > article > h2:nth-child(7){
+    color:rgb(255, 248, 147);
+    text-shadow:2px 2px black;
+}
+article > section{
+    width:100%;
+    text-align: center;
 }
