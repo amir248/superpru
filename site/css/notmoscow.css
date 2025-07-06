@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:linear-gradient(rgb(255, 255, 179), rgb(175, 175, 255));
+}
+main{
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    max-width:900px;
+}
+article{
+    width:100%;
+    
+}
+article > h1{
+    color:coral;
+    text-shadow:black 2px 2px;
+}
+article > ul,ol > li{
+    margin-left:37px;
+}
+article > picture > img{
+    width:100%;
+    max-width:900px;
+    border-radius: 7px;
+}
