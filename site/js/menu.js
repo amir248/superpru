@@ -14,7 +14,7 @@ function closeMenu(){
         document.querySelector('.openMenu').style.cssText=`width:0;right:0;left:100%;`;
         setTimeout(()=>{
             document.querySelector('.openMenu').remove();
-        },1300);z
+        },1300);
     });
     
 }
