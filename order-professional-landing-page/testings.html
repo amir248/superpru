@@ -42,7 +42,7 @@
         "contactType": "web developer html,css,js,nodejs,mysql"
         },
         "datePublished": "2025-05-07 07:27:57 GMT",
-        "dateModified" : "2025-05-07 07:37:37 GMT",
+        "dateModified" : "2025-08-03 07:37:37 GMT",
         "image": "img/baron-saytoverstausen-himself-500.webp",
         "articleSection": "Разработка уникального дизайна",
         "articleBody": "Тестирование – финальный этап, который определяет успех проекта.",
@@ -196,20 +196,39 @@
        <p>Помните, что качественный запуск лендинг-страницы – это результат тщательной подготовки и всестороннего тестирования. Не экономьте время на проверках, ведь каждая найденная и исправленная ошибка повышает шансы на успешное привлечение клиентов.</p>
 
         </article>
-        <div id="sigCommentsBlock"></div>
-        <a href="http://sigcomments.com" style="font-size: 0.6em;"></a>
-        <script type="text/javascript">
-          (function(){
-            var host_id = '7884';
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.async = true;
-            script.src = '//sigcomments.com/chat/?host_id='+host_id;
-            var ss = document.getElementsByTagName('script')[0]; 
-            ss.parentNode.insertBefore(script, ss);
-          })();
-        </script>
+        <div id="comments" style="width:100%;max-width:100%"></div>
+<a href="https://comments.qucu.ru/" style="font-size: 17px;">https://comments.qucu.ru/</a>
+                <script>
 
+            const loginAndSite={
+              origin:window.location.host,
+              referrer:window.location.href
+            }
+            const importantBag={id:"mad",site:window.location};
+            const script =document.createElement('script');
+            const url ='https://comments.qucu.ru/allow-cors';
+            async function goComments(){
+              await fetch(url,{
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                },
+                origin:`${loginAndSite.origin}`,
+                method: "POST",
+                referrer: `${loginAndSite.referrer}`,
+                referrerPolicy: "origin-when-cross-origin",
+                mode:"cors",
+                credentials: "omit",
+                cache: "no-store",
+              }).then(response=>response.text()).then(result=>{
+                document.querySelector('#comments').append(script);
+                let oK = document.querySelector('#comments > script');
+                oK.innerHTML=result;
+              });
+            }
+            setTimeout(()=>goComments(),1300);
+        
+                </script>
 
         <footer w3-include-html="../site/includeHTML/footer.html"></footer>
     </main>
