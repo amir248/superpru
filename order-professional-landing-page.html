@@ -392,7 +392,7 @@
     "contactType": "web developer html,css,js,nodejs,mysql"
     },
     "datePublished": "2024-12-17 07:27:57 GMT",
-    "dateModified" : "2025-05-11 07:37:17 GMT",
+    "dateModified" : "2025-08-03 07:37:17 GMT",
     "image": "img/baron-saytoverstausen-himself-500.webp",
     "articleSection": "Order a landing page, a multi-landing page based on a figma layout! Sites on JS",
     "articleBody": "Order: landing, multi-landing, landing page, one-page, finalization, modification, making changes: html, css, js, nodejs, mysql. SEO optimization, promotion in contextual advertising.",
@@ -564,7 +564,41 @@
             <p>Закажите профессиональный лендинг пейдж прямо сейчас и увеличьте продажи вашего бизнеса!</p>
             <p>Для получения консультации и расчета <a href="https://madness.qucu.ru/commercialOffer">стоимости</a> оставьте заявку через <a href="https://wa.clck.bar/79528885656">whatsApp</a></p>
         </article>
+        <section>
+            <div id="comments" style="width:100%;max-width:100%"></div>
+<a href="https://comments.qucu.ru/" style="font-size: 17px;">https://comments.qucu.ru/</a>
+                <script>
+
+            const loginAndSite={
+              origin:window.location.host,
+              referrer:window.location.href
+            }
+            const importantBag={id:"mad",site:window.location};
+            const script =document.createElement('script');
+            const url ='https://comments.qucu.ru/allow-cors';
+            async function goComments(){
+              await fetch(url,{
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                },
+                origin:`${loginAndSite.origin}`,
+                method: "POST",
+                referrer: `${loginAndSite.referrer}`,
+                referrerPolicy: "origin-when-cross-origin",
+                mode:"cors",
+                credentials: "omit",
+                cache: "no-store",
+              }).then(response=>response.text()).then(result=>{
+                document.querySelector('#comments').append(script);
+                let oK = document.querySelector('#comments > script');
+                oK.innerHTML=result;
+              });
+            }
+            setTimeout(()=>goComments(),1300);
         
+                </script>
+        </section>
         <footer w3-include-html="site/includeHTML/footer.html">
             <script>
                 const numSteps = 20.0;
