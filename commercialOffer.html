@@ -565,7 +565,7 @@
  
         </div>
                <section>
-                <div id="sigCommentsBlock"></div>
+                <!-- <div id="sigCommentsBlock"></div>
   
                 <a href="http://sigcomments.com" style="font-size: 0.6em;"></a>
                 <script type="text/javascript">
@@ -578,8 +578,40 @@
                     var ss = document.getElementsByTagName('script')[0]; 
                     ss.parentNode.insertBefore(script, ss);
                   })();
-                </script>
+                </script> -->
+                 <div id="comments" style="width:100%;max-width:100%"></div>
+<a href="https://comments.qucu.ru/" style="font-size: 17px;">https://comments.qucu.ru/</a>
+                <script>
 
+            const loginAndSite={
+              origin:window.location.host,
+              referrer:window.location.href
+            }
+            const importantBag={id:"mad",site:window.location};
+            const script =document.createElement('script');
+            const url ='https://comments.qucu.ru/allow-cors';
+            async function goComments(){
+              await fetch(url,{
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                },
+                origin:`${loginAndSite.origin}`,
+                method: "POST",
+                referrer: `${loginAndSite.referrer}`,
+                referrerPolicy: "origin-when-cross-origin",
+                mode:"cors",
+                credentials: "omit",
+                cache: "no-store",
+              }).then(response=>response.text()).then(result=>{
+                document.querySelector('#comments').append(script);
+                let oK = document.querySelector('#comments > script');
+                oK.innerHTML=result;
+              });
+            }
+            setTimeout(()=>goComments(),1300);
+        
+                </script>
         </section>
         <!-- <button id="buttonPrice">price</button> -->
         <footer>
