@@ -593,15 +593,14 @@
             async function goComments(){
               await fetch(url,{
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*'
+                    'Content-Type': 'application/json'
                 },
                 origin:`${loginAndSite.origin}`,
                 method: "POST",
                 referrer: `${loginAndSite.referrer}`,
                 referrerPolicy: "origin-when-cross-origin",
                 mode:"cors",
-                credentials: "omit",
+                credentials: "include",
                 cache: "no-store",
               }).then(response=>response.text()).then(result=>{
                 document.querySelector('#comments').append(script);
